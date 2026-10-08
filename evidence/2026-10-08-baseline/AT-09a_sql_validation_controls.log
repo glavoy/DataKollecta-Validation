@@ -1,0 +1,69 @@
+# psql -f supabase/tests/validation_controls.sql
+BEGIN
+INSERT 0 1
+INSERT 0 1
+INSERT 0 0
+INSERT 0 1
+INSERT 0 1
+              set_config              
+--------------------------------------
+ 006e5c94-1b80-4297-86ab-a6e2472b3802
+(1 row)
+
+              set_config              
+--------------------------------------
+ d2f6045a-8601-4eef-b8f7-15467421affd
+(1 row)
+
+DO
+UPDATE 1
+DO
+INSERT 0 1
+UPDATE 1
+DO
+              set_config              
+--------------------------------------
+ ed2d6150-2a8b-4713-b02f-a42f23f2bd11
+(1 row)
+
+                                set_config                                
+--------------------------------------------------------------------------
+ {"sub": "ed2d6150-2a8b-4713-b02f-a42f23f2bd11", "role": "authenticated"}
+(1 row)
+
+SET
+ set_project_data_lock 
+-----------------------
+ 
+(1 row)
+
+ record_data_export 
+--------------------
+                 16
+(1 row)
+
+DO
+RESET
+SET
+DO
+RESET
+SET
+ set_project_data_lock 
+-----------------------
+ 
+(1 row)
+
+RESET
+UPDATE 1
+DO
+              set_config              
+--------------------------------------
+ d3810ae4-5ff2-4d21-9cfa-066a3870ff0c
+(1 row)
+
+SET
+DO
+RESET
+ROLLBACK
+Validation control engineering checks passed; fixtures rolled back
+exit=0

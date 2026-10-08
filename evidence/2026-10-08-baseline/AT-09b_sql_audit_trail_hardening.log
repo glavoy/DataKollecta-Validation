@@ -1,0 +1,48 @@
+# psql -f supabase/tests/audit_trail_hardening.sql
+BEGIN
+INSERT 0 1
+              set_config              
+--------------------------------------
+ 887bcd00-aa7b-40c5-a055-9f081309e2f9
+(1 row)
+
+              set_config              
+--------------------------------------
+ 3e48755a-9271-44ad-abc4-77477ab84541
+(1 row)
+
+              set_config              
+--------------------------------------
+ 4b6f6f51-1680-4b26-abfd-d154b2455f82
+(1 row)
+
+INSERT 0 1
+INSERT 0 0
+INSERT 0 1
+INSERT 0 1
+UPDATE 1
+DO
+INSERT 0 1
+DO
+        set_config        
+--------------------------
+ {"role": "service_role"}
+(1 row)
+
+SET
+INSERT 0 1
+RESET
+ set_config 
+------------
+ 
+(1 row)
+
+DO
+DO
+INSERT 0 1
+DO
+UPDATE 1
+INSERT 0 1
+ROLLBACK
+Audit trail hardening checks passed; fixtures rolled back
+exit=0

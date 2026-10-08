@@ -1,0 +1,14 @@
+test_corruption_is_refused (test_snapshot_integrity.SnapshotIntegrityTests.test_corruption_is_refused) ... ok
+test_duplicate_manifest_entry_is_refused (test_snapshot_integrity.SnapshotIntegrityTests.test_duplicate_manifest_entry_is_refused) ... ok
+test_missing_or_unlisted_file_is_refused (test_snapshot_integrity.SnapshotIntegrityTests.test_missing_or_unlisted_file_is_refused) ... ok
+test_path_traversal_is_refused (test_snapshot_integrity.SnapshotIntegrityTests.test_path_traversal_is_refused) ... ok
+test_symbolic_link_is_refused (test_snapshot_integrity.SnapshotIntegrityTests.test_symbolic_link_is_refused) ... ok
+test_unmodified_snapshot_verifies (test_snapshot_integrity.SnapshotIntegrityTests.test_unmodified_snapshot_verifies) ... ok
+test_builtin_database_cannot_be_a_restore_destination (test_snapshot_integrity.SnapshotRestoreSafetyTests.test_builtin_database_cannot_be_a_restore_destination) ... ok
+test_remote_restore_is_refused_before_any_command_runs (test_snapshot_integrity.SnapshotRestoreSafetyTests.test_remote_restore_is_refused_before_any_command_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.055s
+
+OK
+exit=0

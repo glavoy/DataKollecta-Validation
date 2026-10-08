@@ -1,0 +1,1229 @@
+   Woah! You appear to be trying to run flutter as root.
+   We strongly recommend running the flutter tool without superuser privileges.
+  /
+📎
+00:00 +0: loading /home/user/DataKollecta/test/config/app_config_test.dart
+00:00 +0: /home/user/DataKollecta/test/config/app_config_test.dart: the build resolves to exactly one known country
+00:00 +1: /home/user/DataKollecta/test/config/app_config_test.dart: language and default-country flags agree with the country
+00:00 +2: /home/user/DataKollecta/test/config/app_config_test.dart: exactly one of the two flavors is active
+00:00 +3: /home/user/DataKollecta/test/config/app_config_test.dart: an unflavored build is Uganda in English
+00:00 +4: /home/user/DataKollecta/test/config/app_config_test.dart: the build resolves to exactly one known product
+00:00 +5: /home/user/DataKollecta/test/config/app_config_test.dart: storage folder and app name follow the product, not the country
+00:00 +6: /home/user/DataKollecta/test/config/app_config_test.dart: exactly one product is active
+00:00 +7: /home/user/DataKollecta/test/config/app_config_test.dart: DataKollecta never participates in the country axis
+00:01 +8: /home/user/DataKollecta/test/services/id_generator_test.dart: increments past the highest existing ID
+00:01 +9: /home/user/DataKollecta/test/services/id_generator_test.dart: starts at 1 when the table is empty
+00:01 +10: /home/user/DataKollecta/test/services/id_generator_test.dart: ignores other columns that share the base ID prefix
+00:01 +11: /home/user/DataKollecta/test/services/id_generator_test.dart: ignores barcodes and other unrelated identifiers
+00:01 +12: /home/user/DataKollecta/test/services/id_generator_test.dart: only counts the named field when several ID columns exist
+00:01 +13: /home/user/DataKollecta/test/services/id_generator_test.dart: matches the field name as the dictionary spelled it
+00:01 +14: /home/user/DataKollecta/test/services/id_generator_test.dart: ignores values whose suffix is the wrong length
+00:01 +15: /home/user/DataKollecta/test/services/id_generator_test.dart: ignores values whose suffix is not numeric
+00:01 +16: /home/user/DataKollecta/test/services/id_generator_test.dart: ignores records from other base IDs
+00:01 +17: /home/user/DataKollecta/test/services/id_generator_test.dart: tolerates null and missing ID values
+00:01 +18: /home/user/DataKollecta/test/services/id_generator_test.dart: matches the base ID case-sensitively
+00:01 +19: /home/user/DataKollecta/test/services/id_generator_test.dart: a prefix carrying SQL wildcard characters does not treat _ as a single-character wildcard
+00:01 +20: /home/user/DataKollecta/test/services/id_generator_test.dart: a prefix carrying SQL wildcard characters does not treat % as a multi-character wildcard
+00:01 +21: /home/user/DataKollecta/test/services/id_generator_test.dart: the reserved sentinel band sits at the top of the range
+00:01 +22: /home/user/DataKollecta/test/services/id_generator_test.dart: the reserved sentinel band shrinks to one value where the range cannot spare ten
+00:01 +23: /home/user/DataKollecta/test/services/id_generator_test.dart: the reserved sentinel band does not poison the counter after a degraded ID was issued
+00:01 +24: /home/user/DataKollecta/test/services/id_generator_test.dart: the reserved sentinel band ignores every value in the band, not just the top one
+00:01 +25: /home/user/DataKollecta/test/services/id_generator_test.dart: degradedIncrement starts at the top of the range
+00:01 +26: /home/user/DataKollecta/test/services/id_generator_test.dart: degradedIncrement counts down so repeated failures on one device differ
+00:01 +27: /home/user/DataKollecta/test/services/id_generator_test.dart: degradedIncrement wraps within the band rather than escaping it
+00:01 +28: /home/user/DataKollecta/test/services/id_generator_test.dart: degradedIncrement is a single fixed value where the band is one wide
+00:01 +29: /home/user/DataKollecta/test/services/id_generator_test.dart: running out of range throws rather than return a value that will not fit
+00:01 +30: /home/user/DataKollecta/test/services/id_generator_test.dart: running out of range the message names the field that needs a wider increment
+00:01 +31: /home/user/DataKollecta/test/services/id_generator_test.dart: running out of range the last usable value before the band is still issued
+00:04 +32: /home/user/DataKollecta/test/services/db_service_test.dart: explicit null update values overwrite old SQLite values
+00:04 +33: /home/user/DataKollecta/test/services/db_service_test.dart: CSV import keeps quoted commas and escaped quotes intact
+[DbService] Importing CSV: schools...
+[DbService] Imported 3 rows into schools
+00:04 +34: /home/user/DataKollecta/test/services/db_service_test.dart: CSV import replaces previous contents
+[DbService] Importing CSV: villages...
+[DbService] Imported 1 rows into villages
+[DbService] Importing CSV: villages...
+[DbService] Imported 1 rows into villages
+00:04 +35: /home/user/DataKollecta/test/services/db_service_test.dart: CSV import preserves zero-padded codes
+[DbService] Importing CSV: villages...
+[DbService] Imported 2 rows into villages
+00:04 +36: /home/user/DataKollecta/test/services/db_service_test.dart: formchanges is created with changeuniqueid/surveyor_id/synced_at
+[DbService] Creating formchanges table for survey1...
+00:04 +37: /home/user/DataKollecta/test/services/db_service_test.dart: a legacy formchanges table is migrated without losing existing rows
+[DbService] Added changeuniqueid column to formchanges for survey1
+[DbService] Added surveyor_id column to formchanges for survey1
+[DbService] Added synced_at column to formchanges for survey1
+00:04 +38: /home/user/DataKollecta/test/services/db_service_test.dart: prepareUpdateRowData clears synced_at only when the column exists
+00:04 +39: /home/user/DataKollecta/test/services/db_service_test.dart: collapseDuplicateUniqueIds keeps only the most-recent-lastmod row per uniqueid (the real subject 21040040057 scenario: 3 identical rows, only lastmod differs)
+00:04 +40: /home/user/DataKollecta/test/services/db_service_test.dart: collapseDuplicateUniqueIds only collapses the duplicated group and preserves first-seen order for the rest
+00:04 +41: /home/user/DataKollecta/test/services/db_service_test.dart: collapseDuplicateUniqueIds never merges different uniqueids, even when every other field (including lastmod) matches -- the safety-net property this function must never violate
+00:04 +42: /home/user/DataKollecta/test/services/db_service_test.dart: collapseDuplicateUniqueIds resolves a tie on lastmod without crashing or double-counting
+00:04 +43: /home/user/DataKollecta/test/services/db_service_test.dart: collapseDuplicateUniqueIds treats a missing lastmod as older than a real one
+00:04 +44: /home/user/DataKollecta/test/services/db_service_test.dart: collapseDuplicateUniqueIds keeps rows with no uniqueid as separate entries
+00:04 +45: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a crfs row naming an unusable column refuses the whole sync
+[DbService] Creating crfs table for s1...
+00:04 +46: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a bad row leaves the previous configuration in place
+[DbService] Creating crfs table for s1...
+00:04 +47: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a displayname is prose and is not held to the identifier rule
+[DbService] Creating crfs table for s1...
+00:04 +48: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a fresh install creates the table and loads every form
+[DbService] Creating crfs table for s1...
+00:04 +49: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a table from an older build gains the columns it is missing
+[DbService] Added repeat_count_field column to crfs for s1
+[DbService] Added auto_start_repeat column to crfs for s1
+[DbService] Added repeat_enforce_count column to crfs for s1
+[DbService] Added entry_condition column to crfs for s1
+00:04 +50: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a manifest naming a column this build does not know keeps the rest
+[DbService] Creating crfs table for s1...
+[DbService ERROR] Ignoring unknown crfs column "some_future_column" for hh_members in s1
+00:04 +51: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a failed repopulate keeps the previous configuration
+[DbService] Creating crfs table for s1...
+*** WARNING ***
+
+Invalid argument [not, a, number] with type List<String>.
+Only num, String and Uint8List are supported. See https://github.com/tekartik/sqflite/blob/master/sqflite/doc/supported_types.md for details
+
+This will throw an exception in the future. For now it is displayed once per type.
+
+    
+#0      _checkArg (package:sqflite_common/src/value_utils.dart:31:7)
+#1      checkNonNullValue (package:sqflite_common/src/value_utils.dart:52:5)
+#2      new SqlBuilder.insert.<anonymous closure> (package:sqflite_common/src/sql_builder.dart:187:11)
+#3      _LinkedHashMapMixin.forEach (dart:_compact_hash:721:13)
+#4      new SqlBuilder.insert (package:sqflite_common/src/sql_builder.dart:176:14)
+#5      SqfliteDatabaseExecutorMixin.insert (package:sqflite_common/src/database_mixin.dart:70:32)
+#6      DbService._syncCrfsTable.<anonymous closure> (package:datakollecta/services/db_service.dart:537:21)
+<asynchronous suspension>
+#7      SqfliteDatabaseMixinExt._txnTransaction (package:sqflite_common/src/database_mixin.dart:390:16)
+<asynchronous suspension>
+#8      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)
+<asynchronous suspension>
+#9      SqfliteDatabaseMixin.txnSynchronized (package:sqflite_common/src/database_mixin.dart:591:14)
+<asynchronous suspension>
+#10     DbService._syncCrfsTable (package:datakollecta/services/db_service.dart:516:7)
+<asynchronous suspension>
+#11     main.<anonymous closure>.<anonymous closure> (file:///home/user/DataKollecta/test/services/db_service_test.dart:476:7)
+<asynchronous suspension>
+#12     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)
+<asynchronous suspension>
+#13     Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)
+<asynchronous suspension>
+#14     Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)
+<asynchronous suspension>
+
+[DbService ERROR] Error populating crfs table from manifest for s1 -- the previous configuration has been kept: SqfliteFfiException(error, Invalid argument(s): Invalid sql argument type 'List<String>': [not, a, number]}) DatabaseException(Invalid argument(s): Invalid sql argument type 'List<String>': [not, a, number])
+00:04 +52: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: parseEnforceMode reads the INTEGER column, a stringly-typed value, and blank
+00:04 +53: /home/user/DataKollecta/test/services/db_service_test.dart: crfs table sync a manifest with no crfs section leaves the table alone
+[DbService] Creating crfs table for s1...
+[DbService ERROR] No "crfs" section found in manifest for s1
+00:04 +54: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +54: /home/user/DataKollecta/test/services/db_service_test.dart: a failed read is not an empty table tryGetExistingRecords reports a failed read as null
+[DbService] Initializing database for survey: survey-that-was-never-opened
+[DbService ERROR] Failed to initialize database for survey-that-was-never-opened: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+[DbService ERROR] Error fetching records: Database not initialized for survey: survey-that-was-never-opened
+00:04 +55: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +55: /home/user/DataKollecta/test/services/db_service_test.dart: a failed read is not an empty table getExistingRecords still flattens a failure to no rows
+[DbService] Initializing database for survey: survey-that-was-never-opened
+[DbService ERROR] Failed to initialize database for survey-that-was-never-opened: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+[DbService ERROR] Error fetching records: Database not initialized for survey: survey-that-was-never-opened
+00:04 +56: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +56: /home/user/DataKollecta/test/services/db_service_test.dart: a failed read is not an empty table tryGetMaxIdIncrement reports a failed read as null, not as 0
+[DbService] Initializing database for survey: survey-that-was-never-opened
+[DbService ERROR] Failed to initialize database for survey-that-was-never-opened: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+[DbService ERROR] Error reading the highest "subjid" under "2105005" in "enrollee": Database not initialized for survey: survey-that-was-never-opened
+00:04 +57: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +58: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +59: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +60: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +61: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +62: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +63: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +64: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +65: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:04 +66: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:05 +67: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a form with no repeat_count_field is not a counted child
+00:05 +68: /home/user/DataKollecta/test/services/db_service_test.dart: nextIncrementValueIn refuses a linking column it cannot safely quote
+00:05 +69: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate matching counts need no reconciliation
+00:05 +70: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate matching counts need no reconciliation
+00:05 +70: /home/user/DataKollecta/test/services/db_service_test.dart: nextIncrementValueIn a failed read issues the degraded value, not 1
+[DbService] Initializing database for survey: survey-that-was-never-opened
+[DbService ERROR] Failed to initialize database for survey-that-was-never-opened: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+[DbService ERROR] Error getting next linenum for hh_members (hhid=HH001) -- issuing 0 so the record is still saved and the degraded value is identifiable: Database not initialized for survey: survey-that-was-never-opened
+00:05 +71: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate matching counts need no reconciliation
+00:05 +72: /home/user/DataKollecta/test/services/db_service_test.dart: nextIncrementValueIn a stored degraded value does not poison the counter
+00:05 +73: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 3 auto-syncs a shortfall that is still within range
+00:05 +74: /home/user/DataKollecta/test/services/db_service_test.dart: nextIncrementValuesIn answers per parent in one query
+00:05 +75: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 3 auto-syncs an extra child added after the loop
+00:05 +76: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 3 auto-syncs an extra child added after the loop
+00:05 +77: /home/user/DataKollecta/test/services/db_service_test.dart: nextIncrementValuesIn is empty for a table this survey does not have
+00:05 +78: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 1 asks rather than writing
+00:05 +79: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 1 asks rather than writing
+00:05 +79: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints the production open path enforces foreign keys
+[DbService] Creating formchanges table for s1...
+00:05 +80: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 1 asks rather than writing
+00:05 +80: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a child whose parent does not exist is refused
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +81: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a child whose parent does not exist is refused
+[DbService] Creating formchanges table for s1...
+00:05 +82: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a child whose parent does not exist is refused
+00:05 +83: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate mode 2 is settled inside the loop, not here
+00:05 +83: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a second household claiming the same hhid is refused
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +84: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a second household claiming the same hhid is refused
+00:05 +85: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate zero children never auto-syncs a count declared as at least 1
+00:05 +85: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints two rows cannot share a uniqueid
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +86: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints two rows cannot share a uniqueid
+00:05 +87: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate the floor outranks even the warn mode prompt
+00:05 +87: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a duplicate (hhid, linenum) is accepted, deliberately
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +88: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a duplicate (hhid, linenum) is accepted, deliberately
+[DbService] Creating formchanges table for s1...
+00:05 +89: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate more children than UpperRange allows is reported, not written
+00:05 +89: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints the same linenum under a different household is fine
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +90: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate more children than UpperRange allows is reported, not written
+00:05 +90: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints correcting a household id carries to its children
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +91: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints correcting a household id carries to its children
+00:05 +92: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: evaluate a count question with no declared range keeps the old behaviour
+00:05 +93: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a cascade re-arms each child for upload and audits itself
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +94: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a cascade re-arms each child for upload and audits itself
+00:05 +95: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount writes the actual count onto the parent record
+00:05 +95: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints the cascade trigger survives recursive_triggers being on
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +96: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount writes the actual count onto the parent record
+00:05 +96: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a foreign key is skipped when the parent has no such column
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +96: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount writes the actual count onto the parent record
+[DbService] Updated hh_info.nmembers from 6 to 5
+00:05 +97: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount writes the actual count onto the parent record
+00:05 +97: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a child may link on a column that is not the parent primary key
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +98: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a child may link on a column that is not the parent primary key
+[DbService] Creating formchanges table for s1...
+00:05 +99: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount an already-uploaded parent is queued for re-upload
+[DbService] Updated hh_info.nmembers from 6 to 5
+00:05 +99: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a leaf child carries no UNIQUE and no parent-side constraint
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +100: /home/user/DataKollecta/test/services/db_service_test.dart: survey table constraints a leaf child carries no UNIQUE and no parent-side constraint
+[DbService] Creating formchanges table for s1...
+00:05 +101: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount the correction is auditable in formchanges
+00:05 +102: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount the correction is auditable in formchanges
+00:05 +103: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount the correction is auditable in formchanges
+00:05 +104: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount the correction is auditable in formchanges
+00:05 +104: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields a failed read is null, not 0
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Initializing database for survey: survey-that-was-never-opened
+[DbService ERROR] Failed to initialize database for survey-that-was-never-opened: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+[DbService ERROR] Error counting records in hh_members: Database not initialized for survey: survey-that-was-never-opened
+[DbService] Initializing database for survey: survey-that-was-never-opened
+[DbService ERROR] Failed to initialize database for survey-that-was-never-opened: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+[DbService ERROR] Error counting records in hh_members: Database not initialized for survey: survey-that-was-never-opened
+00:05 +104: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount the correction is auditable in formchanges
+[DbService] Updated hh_info.nmembers from 6 to 5
+00:05 +105: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount the correction is auditable in formchanges
+00:05 +105: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields a missing table is 0, not null
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +106: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields a missing table is 0, not null
+00:05 +107: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount a write that changes nothing does not force a re-upload
+00:05 +107: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields counts one parent's children
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +108: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount a write that changes nothing does not force a re-upload
+00:05 +108: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields refuses a table name it cannot safely quote
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService ERROR] Error counting records in odd"name: Unusable SQL identifier: "odd"name".
+00:05 +109: /home/user/DataKollecta/test/services/repeat_count_service_test.dart: applyCount a write that changes nothing does not force a re-upload
+00:05 +109: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields primary key fields are lowercased, whatever the worksheet said
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +110: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields primary key fields are lowercased, whatever the worksheet said
+[DbService] Creating crfs table for s-count...
+00:05 +111: loading /home/user/DataKollecta/test/services/logic_service_test.dart
+00:05 +111: /home/user/DataKollecta/test/services/db_service_test.dart: tryGetRecordCount and getPrimaryKeyFields existing primary keys come back under lowercased column names
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+00:05 +112: /home/user/DataKollecta/test/services/db_service_test.dart: the parent_uniqueid join key the schema and answer layers agree on the column name
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +113: /home/user/DataKollecta/test/services/db_service_test.dart: the parent_uniqueid join key a child gets a second foreign key, on the immutable key
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +114: /home/user/DataKollecta/test/services/db_service_test.dart: the parent_uniqueid join key the parent-link key does not cascade, because it cannot change
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +115: /home/user/DataKollecta/test/services/db_service_test.dart: the parent_uniqueid join key no parent-link key when the column is absent
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +116: /home/user/DataKollecta/test/services/db_service_test.dart: the parent_uniqueid join key a child pointing at no real parent record is refused
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +117: /home/user/DataKollecta/test/services/db_service_test.dart: the parent_uniqueid join key correcting the business key leaves the join key untouched
+*** sqflite warning ***
+
+You are changing sqflite default factory.
+Be aware of the potential side effects. Any library using sqflite
+will have this factory as the default for all operations.
+
+*** sqflite warning ***
+
+[DbService] Creating formchanges table for s1...
+00:05 +118: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds CSV import quotes the table name and every header
+[DbService] Importing CSV: region list...
+[DbService] Imported 1 rows into region list
+00:05 +119: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds CSV import refuses a name carrying a double quote
+[DbService] Importing CSV: ok...
+00:05 +120: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds isValueUnique quotes both the table and the column
+00:05 +121: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds isValueUnique still fails open when the guard refuses a name
+00:05 +122: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds the ALTER path quotes what the CREATE path already quoted
+00:05 +123: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds quoteIdentifier refuses rather than escaping
+00:05 +124: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds validateIdentifier accepts what SurveyGen can produce
+00:05 +125: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds validateIdentifier refuses everything else
+00:05 +126: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds validateQuerySql accepts the lookups the feature exists for
+00:05 +127: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds validateQuerySql refuses anything that is not one SELECT
+00:05 +128: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds a refused query names the question and what is allowed
+00:05 +129: /home/user/DataKollecta/test/services/db_service_test.dart: the identifier guard is on every statement this file builds a refusal names the identifier and where it came from
+00:05 +130: /home/user/DataKollecta/test/services/db_service_test.dart: what the shared equality rule changed about formchanges a DateTime answer is still stamped as ISO text, exactly as before
+[DbService ERROR] Failed to write backup: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+00:05 +131: /home/user/DataKollecta/test/services/db_service_test.dart: what the shared equality rule changed about formchanges a DateTime answer equal to the text it was loaded from records nothing
+[DbService ERROR] Failed to write backup: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+00:05 +132: /home/user/DataKollecta/test/services/db_service_test.dart: what the shared equality rule changed about formchanges re-writing the same instant in another format records nothing
+00:05 +133: /home/user/DataKollecta/test/services/db_service_test.dart: what the shared equality rule changed about formchanges padding still records nothing, as it always did
+00:05 +134: /home/user/DataKollecta/test/services/db_service_test.dart: what the shared equality rule changed about formchanges a genuine change is still recorded and still re-arms the row
+[DbService] Updated visit.count from 4 to 5
+00:05 +135: /home/user/DataKollecta/test/services/logic_service_test.dart: contains / does not contain contains is true when the value is in a List answer
+[LogicService]   Evaluating single condition: "symptoms contains '99'"
+[LogicService]   Parsed: symptoms contains '99'
+[LogicService]   Values: leftValue="[1, 99]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for symptoms: "symptoms contains '99'" --> true
+00:06 +136: /home/user/DataKollecta/test/services/logic_service_test.dart: contains / does not contain contains is false when the value is not in a List answer
+[LogicService]   Evaluating single condition: "symptoms contains '99'"
+[LogicService]   Parsed: symptoms contains '99'
+[LogicService]   Values: leftValue="[1, 2]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: false
+[LogicService] Evaluating logic for symptoms: "symptoms contains '99'" --> false
+00:06 +137: /home/user/DataKollecta/test/services/logic_service_test.dart: contains / does not contain does not contain negates membership
+[LogicService]   Evaluating single condition: "symptoms does not contain '99'"
+[LogicService]   Parsed: symptoms does not contain '99'
+[LogicService]   Values: leftValue="[1, 99]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: false
+[LogicService] Evaluating logic for symptoms: "symptoms does not contain '99'" --> false
+[LogicService]   Evaluating single condition: "symptoms does not contain '99'"
+[LogicService]   Parsed: symptoms does not contain '99'
+[LogicService]   Values: leftValue="[1, 2]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for symptoms: "symptoms does not contain '99'" --> true
+00:06 +138: /home/user/DataKollecta/test/services/logic_service_test.dart: contains / does not contain falls back to a comma-separated string answer
+[LogicService]   Evaluating single condition: "symptoms contains '99'"
+[LogicService]   Parsed: symptoms contains '99'
+[LogicService]   Values: leftValue="1,99" (String), rightValue="99" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for symptoms: "symptoms contains '99'" --> true
+00:06 +139: /home/user/DataKollecta/test/services/logic_service_test.dart: symptoms mutual-exclusion check exclusive value alone passes
+[LogicService]   Evaluating single condition: "symptoms contains '99'"
+[LogicService]   Parsed: symptoms contains '99'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: true
+[LogicService]   Evaluating single condition: "symptoms contains '1' or symptoms contains '2' or symptoms contains '3' or symptoms contains '4' or symptoms contains '5' or symptoms contains '6' or symptoms contains '7' or symptoms contains '8' or symptoms contains '9' or symptoms contains '10' or symptoms contains '11' or symptoms contains '12'"
+[LogicService]   Evaluating single condition: "symptoms contains '1'"
+[LogicService]   Parsed: symptoms contains '1'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="1" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '2'"
+[LogicService]   Parsed: symptoms contains '2'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="2" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '3'"
+[LogicService]   Parsed: symptoms contains '3'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="3" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '4'"
+[LogicService]   Parsed: symptoms contains '4'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="4" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '5'"
+[LogicService]   Parsed: symptoms contains '5'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="5" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '6'"
+[LogicService]   Parsed: symptoms contains '6'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="6" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '7'"
+[LogicService]   Parsed: symptoms contains '7'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="7" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '8'"
+[LogicService]   Parsed: symptoms contains '8'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="8" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '9'"
+[LogicService]   Parsed: symptoms contains '9'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="9" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '10'"
+[LogicService]   Parsed: symptoms contains '10'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="10" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '11'"
+[LogicService]   Parsed: symptoms contains '11'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="11" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '12'"
+[LogicService]   Parsed: symptoms contains '12'
+[LogicService]   Values: leftValue="[99]" (List<String>), rightValue="12" (String)
+[LogicService]   Result: false
+[LogicService] Evaluating logic for symptoms: "symptoms contains '99' and (symptoms contains '1' or symptoms contains '2' or symptoms contains '3' or symptoms contains '4' or symptoms contains '5' or symptoms contains '6' or symptoms contains '7' or symptoms contains '8' or symptoms contains '9' or symptoms contains '10' or symptoms contains '11' or symptoms contains '12')" --> false
+00:06 +140: /home/user/DataKollecta/test/services/logic_service_test.dart: symptoms mutual-exclusion check exclusive value with another symptom fails with the message
+[LogicService]   Evaluating single condition: "symptoms contains '99'"
+[LogicService]   Parsed: symptoms contains '99'
+[LogicService]   Values: leftValue="[99, 3]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: true
+[LogicService]   Evaluating single condition: "symptoms contains '1' or symptoms contains '2' or symptoms contains '3' or symptoms contains '4' or symptoms contains '5' or symptoms contains '6' or symptoms contains '7' or symptoms contains '8' or symptoms contains '9' or symptoms contains '10' or symptoms contains '11' or symptoms contains '12'"
+[LogicService]   Evaluating single condition: "symptoms contains '1'"
+[LogicService]   Parsed: symptoms contains '1'
+[LogicService]   Values: leftValue="[99, 3]" (List<String>), rightValue="1" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '2'"
+[LogicService]   Parsed: symptoms contains '2'
+[LogicService]   Values: leftValue="[99, 3]" (List<String>), rightValue="2" (String)
+[LogicService]   Result: false
+[LogicService]   Evaluating single condition: "symptoms contains '3'"
+[LogicService]   Parsed: symptoms contains '3'
+[LogicService]   Values: leftValue="[99, 3]" (List<String>), rightValue="3" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for symptoms: "symptoms contains '99' and (symptoms contains '1' or symptoms contains '2' or symptoms contains '3' or symptoms contains '4' or symptoms contains '5' or symptoms contains '6' or symptoms contains '7' or symptoms contains '8' or symptoms contains '9' or symptoms contains '10' or symptoms contains '11' or symptoms contains '12')" --> true
+00:06 +141: /home/user/DataKollecta/test/services/logic_service_test.dart: symptoms mutual-exclusion check normal symptoms without the exclusive value pass
+[LogicService]   Evaluating single condition: "symptoms contains '99'"
+[LogicService]   Parsed: symptoms contains '99'
+[LogicService]   Values: leftValue="[1, 2, 12]" (List<String>), rightValue="99" (String)
+[LogicService]   Result: false
+[LogicService] Evaluating logic for symptoms: "symptoms contains '99' and (symptoms contains '1' or symptoms contains '2' or symptoms contains '3' or symptoms contains '4' or symptoms contains '5' or symptoms contains '6' or symptoms contains '7' or symptoms contains '8' or symptoms contains '9' or symptoms contains '10' or symptoms contains '11' or symptoms contains '12')" --> false
+00:06 +142: /home/user/DataKollecta/test/services/logic_service_test.dart: existing operators still work (regression) numeric equality
+[LogicService]   Evaluating single condition: "age = 18"
+[LogicService]   Parsed: age = 18
+[LogicService]   Values: leftValue="18" (String), rightValue="18" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for age: "age = 18" --> true
+00:06 +143: /home/user/DataKollecta/test/services/logic_service_test.dart: existing operators still work (regression) date comparison
+[LogicService]   Evaluating single condition: "dob < '2020-01-01'"
+[LogicService]   Parsed: dob < '2020-01-01'
+[LogicService]   Values: leftValue="2019-06-01" (String), rightValue="2020-01-01" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for dob: "dob < '2020-01-01'" --> true
+00:06 +144: /home/user/DataKollecta/test/services/logic_service_test.dart: existing operators still work (regression) AND/OR with parentheses
+[LogicService]   Evaluating single condition: "status = 1 or status = 2"
+[LogicService]   Evaluating single condition: "status = 1"
+[LogicService]   Parsed: status = 1
+[LogicService]   Values: leftValue="1" (String), rightValue="1" (String)
+[LogicService]   Result: true
+[LogicService]   Evaluating single condition: "status <> 2"
+[LogicService]   Parsed: status <> 2
+[LogicService]   Values: leftValue="1" (String), rightValue="2" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for status: "(status = 1 or status = 2) and status <> 2" --> true
+00:06 +145: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters excludes every value in the list
+00:06 +146: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters includes only the values in the list
+00:06 +147: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters an empty "not in" list adds no clause
+00:06 +148: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters an empty "in" list matches no rows
+00:06 +149: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters an empty "not in" list still applies the other filters
+00:06 +150: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters ignores blank entries and surrounding whitespace
+00:06 +151: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters accepts uppercase and irregular spacing
+00:06 +152: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters compares as text when the list is not numeric
+00:06 +153: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters expands placeholders before splitting the list
+00:06 +154: /home/user/DataKollecta/test/services/database_response_service_test.dart: in / not in filters combines with other filters using AND
+00:06 +155: /home/user/DataKollecta/test/services/database_response_service_test.dart: existing filter behavior numeric equality still casts both sides
+00:06 +156: /home/user/DataKollecta/test/services/database_response_service_test.dart: existing filter behavior non-numeric comparison is left as-is
+00:06 +157: /home/user/DataKollecta/test/services/database_response_service_test.dart: existing filter behavior no filters produces no clause
+00:06 +158: /home/user/DataKollecta/test/services/database_response_service_test.dart: generated SQL runs against SQLite first net: nobody selected yet, so everyone is offered
+00:06 +159: /home/user/DataKollecta/test/services/database_response_service_test.dart: generated SQL runs against SQLite later net: already-selected members are excluded
+00:06 +160: /home/user/DataKollecta/test/services/database_response_service_test.dart: generated SQL runs against SQLite zero-padded values still match
+00:06 +161: /home/user/DataKollecta/test/services/database_response_service_test.dart: generated SQL runs against SQLite every member already used leaves nothing to offer
+00:06 +162: /home/user/DataKollecta/test/services/database_response_service_test.dart: generated SQL runs against SQLite an empty "in" list returns no rows
+00:06 +163: /home/user/DataKollecta/test/services/database_response_service_test.dart: generated SQL runs against SQLite "in" restricts to the listed members
+00:06 +164: /home/user/DataKollecta/test/services/database_response_service_test.dart: the operator allowlist every supported spelling still produces its SQL
+00:06 +165: /home/user/DataKollecta/test/services/database_response_service_test.dart: the operator allowlist anything else is refused, not passed through
+00:06 +166: /home/user/DataKollecta/test/services/database_response_service_test.dart: getResponseOptions end to end a keyword table and column are queried and read back
+00:06 +167: /home/user/DataKollecta/test/services/database_response_service_test.dart: getResponseOptions end to end a filter narrows it, with the placeholder expanded
+00:06 +168: /home/user/DataKollecta/test/services/survey_download_association_e2e_test.dart: two surveys downloaded under two different logins each upload with their own credentials/Surveyor ID
+[SurveyConfig] Found 1 zips in /tmp/survey_download_e2e_testXLLCOZ/DataKollecta/zips
+[SurveyConfig] Extracting survey_one.zip to /tmp/survey_download_e2e_testXLLCOZ/DataKollecta/surveys/survey_one
+[SurveyConfig] Found 2 zips in /tmp/survey_download_e2e_testXLLCOZ/DataKollecta/zips
+[SurveyConfig] Extracting survey_two.zip to /tmp/survey_download_e2e_testXLLCOZ/DataKollecta/surveys/survey_two
+00:07 +169: /home/user/DataKollecta/test/services/answer_equality_test.dart: canonical a checkbox List reads the way the rest of the codebase reads one
+00:07 +170: /home/user/DataKollecta/test/services/answer_equality_test.dart: canonical a DateTime reads as the ISO text it is stored as
+00:07 +171: /home/user/DataKollecta/test/services/answer_equality_test.dart: canonical null stays null -- unanswered is not empty
+00:07 +172: /home/user/DataKollecta/test/services/answer_equality_test.dart: canonical everything else is its own toString
+00:07 +173: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer padding is not a change
+00:07 +174: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer different numbers are a change
+00:07 +175: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer two long IDs that differ in the last digit are NOT the same
+00:07 +176: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer a DateTime equals the ISO text it was loaded from
+00:07 +177: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer the same moment written in two zones is the same answer
+00:07 +178: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer different moments are a change
+00:07 +179: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer a checkbox List equals the string SQLite stores it as
+00:07 +180: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer checkbox order still counts as a change
+00:07 +181: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer null equals null, and nothing else
+00:07 +182: /home/user/DataKollecta/test/services/answer_equality_test.dart: sameAnswer text that parses as neither number nor date compares exactly
+00:07 +183: /home/user/DataKollecta/test/services/answer_equality_test.dart: isRepresentationOnlyChange is true only when the text moved but the meaning did not
+00:07 +184: /home/user/DataKollecta/test/services/answer_equality_test.dart: isRepresentationOnlyChange an exact match is false -- the caller has already handled it
+00:07 +185: /home/user/DataKollecta/test/services/answer_equality_test.dart: isRepresentationOnlyChange a real change is false
+00:07 +186: /home/user/DataKollecta/test/services/answer_equality_test.dart: isRepresentationOnlyChange a null on either side is false
+00:07 +187: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.clearAnswersInRange clears route data while preserving protected fields and keys
+Cleared 2 skipped answers: derived, manual_answer
+00:07 +188: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order postskip clears dependencies before calculating its target
+Cleared 1 skipped answers: stale_dependency
+00:07 +189: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order preskip clears dependencies before calculating a later target
+Cleared 2 skipped answers: skipped_question, stale_dependency
+00:07 +190: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order ordinary automatic questions retain their fresh calculation
+00:07 +191: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order postskip clearing preserves primary keys in an existing record
+00:07 +192: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order invalid and non-forward skip targets fall back without looping
+00:07 +193: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order automatic preskips select only the Uganda calculation branch
+Cleared 2 skipped answers: age_at_sep2023, age_in_range_bf
+00:07 +194: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order automatic preskips select only the Burkina Faso branch
+Cleared 2 skipped answers: age_at_apr2025, age_in_range_ug
+00:07 +195: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order postskip "end" computes the trailing system fields but nulls a custom calculation
+00:07 +196: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order postskip "end" clears real questions in between without showing them
+Cleared 1 skipped answers: followup_detail
+Cleared 1 skipped answers: followup_notes
+00:07 +197: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order postskip "end" still computes a registry-only automatic field with no calculation
+00:07 +198: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order preskip "end" is matched case-insensitively and with whitespace
+Cleared 1 skipped answers: later
+00:07 +199: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order postskip "end" preserves primary keys in an existing record
+00:07 +200: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService navigation order clears every jump in a chained preskip route
+Cleared 2 skipped answers: b, c
+Cleared 4 skipped answers: d, e, f, g
+00:07 +201: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField an automatic field with no calculation is an ID to generate
+00:07 +202: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField a field the AutoFields registry knows is not
+00:07 +203: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField a field with its own calculation is not
+00:07 +204: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField a datetime-typed field with no calculation is not
+00:07 +205: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField the screen's own linking and increment fields are not
+00:07 +206: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField matches the linking and increment fields case-insensitively
+00:07 +207: /home/user/DataKollecta/test/services/survey_navigation_service_test.dart: SurveyNavigationService.isGeneratedIdField a caller that knows neither field sends every key to the generator
+00:07 +208: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges a new record always has changes
+00:07 +209: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges an untouched record has none
+00:07 +210: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges an edited value is a change
+00:07 +211: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges a re-padded fixed-length value is not a change
+00:07 +212: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges two spellings of the same instant are not a change
+00:07 +213: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges a genuinely different instant is a change
+00:07 +214: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges lastmod, swver and survey_id never count
+00:07 +215: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges a removed answer is a change
+00:07 +216: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges an added answer is a change
+00:07 +217: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges checkbox lists the same selections in the same order are not a change
+00:07 +218: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges checkbox lists a different length is a change
+00:07 +219: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges checkbox lists a different member is a change
+00:07 +220: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: hasChanges DateTime objects compare by value
+00:07 +221: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers nulls an answered field the interviewer never reached
+Clearing 1 skipped fields: pregnant
+00:07 +222: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers leaves a visited field alone
+00:07 +223: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers never clears a primary key, however unvisited
+Clearing 1 skipped fields: pregnant
+00:07 +224: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers matches a primary key case-insensitively
+00:07 +225: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers leaves automatic and information fields alone
+00:07 +226: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers ignores an answer with no matching question
+00:08 +227: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: clearSkippedAnswers mutates the map it was given, rather than a copy
+Clearing 1 skipped fields: pregnant
+00:08 +228: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage a date is stored as YYYY-MM-DD
+00:08 +229: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage a datetime keeps its time
+00:08 +230: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage a date already in string form is normalised too
+00:08 +231: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage a text answer is untouched, padding and all
+00:08 +232: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage an unparseable date is left exactly as it is
+00:08 +233: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage a null is skipped rather than coerced
+00:08 +234: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage returns a copy, leaving the screen's own map alone
+00:08 +235: /home/user/DataKollecta/test/services/answer_storage_service_test.dart: coerceForStorage copies everything through when there are no questions yet
+00:08 +236: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the ordinary path the first child of a parent gets 1
+Calculated linenum=1 for hhid=1010001
+00:08 +237: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the ordinary path the next child is one past the highest already issued
+Calculated linenum=6 for hhid=1010001
+00:08 +238: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the ordinary path siblings are counted per parent, not per table
+Calculated linenum=1 for hhid=9990009
+00:08 +239: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the ordinary path a gap in the sequence does not reuse the missing number
+Calculated linenum=5 for hhid=1010001
+00:08 +240: /home/user/DataKollecta/test/services/child_increment_service_test.dart: nothing to do writes nothing when the form declares no increment field
+00:08 +241: /home/user/DataKollecta/test/services/child_increment_service_test.dart: nothing to do writes nothing when the increment field is empty
+00:08 +242: /home/user/DataKollecta/test/services/child_increment_service_test.dart: nothing to do writes nothing when the survey has no such question
+00:08 +243: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 when the crfs row declares no linking field
+No linkingfield configured for hh_members -- issuing linenum=0
+00:08 +244: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 when the linking field is declared empty
+No linkingfield configured for hh_members -- issuing linenum=0
+00:08 +245: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 when the parent key is absent from the answers
+Linking field hhid not set -- issuing linenum=0
+00:08 +246: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 when the parent key is present but empty
+Linking field hhid not set -- issuing linenum=0
+00:08 +247: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 when the database cannot be read at all
+Error calculating linenum -- issuing 0: DatabaseException(error database_closed)
+00:08 +248: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 and it says the database failed, not that the dictionary is wrong
+00:08 +249: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 while a genuinely mis-authored dictionary still says so
+00:08 +250: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the degraded value, not 1 a null answer for the parent key degrades rather than counting all
+Linking field hhid not set -- issuing linenum=0
+00:08 +251: /home/user/DataKollecta/test/services/child_increment_service_test.dart: a missing table is an absence, not a failure a table that does not exist yet yields 1, not the sentinel
+Calculated linenum=1 for hhid=1010001
+00:08 +252: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the crfs worksheet is authoritative crfs linkingfield wins over the value passed in
+Calculated linenum=5 for hhid=1010001
+00:08 +253: /home/user/DataKollecta/test/services/child_increment_service_test.dart: the crfs worksheet is authoritative the fallback is used only when crfs declares nothing
+Calculated linenum=5 for hhid=1010001
+00:08 +254: /home/user/DataKollecta/test/services/survey_config_service_test.dart: getManifestForFolder returns the manifest by folder name even when the manifest surveyName differs
+00:08 +255: /home/user/DataKollecta/test/services/survey_config_service_test.dart: getManifestForFolder returns null for a folder that does not exist
+00:09 +256: /home/user/DataKollecta/test/services/survey_loader_test.dart: question type spellings every spelling of automatic maps to the same type
+00:09 +257: /home/user/DataKollecta/test/services/survey_loader_test.dart: question type spellings spellings are case-insensitive
+00:09 +258: /home/user/DataKollecta/test/services/survey_loader_test.dart: question type spellings ordinary types are unaffected
+00:09 +259: /home/user/DataKollecta/test/services/survey_loader_test.dart: system variables the loader neither adds nor moves them
+00:09 +260: /home/user/DataKollecta/test/services/survey_loader_test.dart: system variables a questionnaire without them does not gain them
+00:09 +261: /home/user/DataKollecta/test/services/survey_loader_test.dart: end-of-survey screen the generated wording is translated to the build language
+00:09 +262: /home/user/DataKollecta/test/services/survey_loader_test.dart: end-of-survey screen custom wording is never overwritten
+00:09 +263: /home/user/DataKollecta/test/services/survey_loader_test.dart: end-of-survey screen a questionnaire without the screen does not gain one
+00:09 +264: /home/user/DataKollecta/test/services/survey_loader_test.dart: numeric range message the generated wording is recognised
+00:09 +265: /home/user/DataKollecta/test/services/survey_loader_test.dart: numeric range message a decimal range is recognised
+00:09 +266: /home/user/DataKollecta/test/services/survey_loader_test.dart: numeric range message a message an author wrote is left alone
+00:09 +267: /home/user/DataKollecta/test/services/survey_loader_test.dart: numeric range message a missing message is not mistaken for generated wording
+00:09 +268: /home/user/DataKollecta/test/services/survey_loader_test.dart: numeric range message the replacement follows the build language
+00:09 +269: /home/user/DataKollecta/test/services/survey_loader_test.dart: a real generated questionnaire nothing is duplicated and order is preserved
+00:09 +270: /home/user/DataKollecta/test/services/survey_loader_test.dart: a real generated questionnaire a 'calculated' question is loaded as automatic
+00:09 +271: /home/user/DataKollecta/test/services/survey_loader_test.dart: a real generated questionnaire the final screen is shown in the build language
+00:09 +272: /home/user/DataKollecta/test/services/survey_loader_test.dart: <optional> a question with <optional> is parsed as optional
+00:09 +273: /home/user/DataKollecta/test/services/survey_loader_test.dart: <optional> a question without <optional> is not optional
+00:09 +274: /home/user/DataKollecta/test/services/survey_loader_test.dart: identifiers that reach SQL a well-formed survey still loads
+00:09 +275: /home/user/DataKollecta/test/services/survey_loader_test.dart: identifiers that reach SQL an unusable fieldname refuses the file
+00:09 +276: /home/user/DataKollecta/test/services/survey_loader_test.dart: identifiers that reach SQL an unusable database table or column refuses the file
+00:09 +277: /home/user/DataKollecta/test/services/survey_loader_test.dart: identifiers that reach SQL a CSV source keeps taking column names with spaces
+00:09 +278: /home/user/DataKollecta/test/services/survey_loader_test.dart: identifiers that reach SQL a query calculation is held to a single SELECT
+00:09 +279: /home/user/DataKollecta/test/services/survey_loader_test.dart: identifiers that reach SQL a query <part> inside a concat is held to the same rule
+00:09 +280: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange "04" and "4" are the same answer
+00:09 +281: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange "04" and "4" are the same answer
+00:09 +282: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange an identical string is not reported as a padding change
+00:09 +283: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange genuinely different numbers are a real change
+00:09 +284: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange non-numeric text is always a real change
+00:09 +285: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange a null on either side is a real change
+00:09 +286: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isPaddingOnlyChange handles a numeric type as well as its string form
+00:09 +287: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check a fixed-length field that is not yet full stops, with no message
+00:09 +288: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check a fixed-length field that is full does not stop
+00:09 +289: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check a field longer than its fixed length also stops
+00:09 +290: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check an unfinished decimal stops, and does show a message
+00:09 +291: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check a finished decimal does not stop
+00:09 +292: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check an out-of-range value reports but does NOT stop
+00:09 +293: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: stopsFurtherChecks -- the flag that guards the duplicate check a non-text question never stops
+00:09 +294: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: the numeric range check accepts a value inside the range
+00:09 +295: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: the numeric range check rejects a value outside it, in the build language
+00:09 +296: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: the numeric range check uses the dictionary author's own message when there is one
+00:09 +297: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: the numeric range check an empty answer is not range-checked
+00:09 +298: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: the numeric range check a special response bypasses the range check
+00:09 +299: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: the numeric range check non-numeric text is not range-checked
+00:09 +300: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isAnswered an optional question is answered however blank it is
+00:09 +301: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isAnswered a text answer of only whitespace is not answered
+00:09 +302: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isAnswered a checkbox needs at least one box ticked
+00:09 +303: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isAnswered a date accepts a DateTime, a parseable string, or a sentinel
+00:09 +304: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isAnswered information and automatic questions are always answered
+00:09 +305: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isValid a fixed-length field must be exactly that long, and says nothing
+00:09 +306: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isValid a numeric_check question with no answer is invalid
+00:09 +307: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isValid a sentinel bypasses length and range together
+00:09 +308: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: isValid nothing but a text question is ever invalid
+00:09 +309: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: canProceed an information screen always lets navigation past
+00:09 +310: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: canProceed a blank non-optional question blocks
+00:09 +311: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: canProceed a failing logic check blocks an otherwise valid answer
+[LogicService]   Evaluating single condition: "hhnum > 5"
+[LogicService]   Parsed: hhnum > 5
+[LogicService]   Values: leftValue="9" (String), rightValue="5" (String)
+[LogicService]   Result: true
+[LogicService] Evaluating logic for hhnum: "hhnum > 5" --> true
+[LogicService]   Evaluating single condition: "hhnum > 5"
+[LogicService]   Parsed: hhnum > 5
+[LogicService]   Values: leftValue="2" (String), rightValue="5" (String)
+[LogicService]   Result: false
+[LogicService] Evaluating logic for hhnum: "hhnum > 5" --> false
+00:09 +312: /home/user/DataKollecta/test/services/answer_validation_service_test.dart: canProceed an out-of-range answer blocks even though it is answered
+00:09 +313: /home/user/DataKollecta/test/services/field_comparator_test.dart: resolveText / resolveTextOrEmpty null resolves to null, or to empty for the *OrEmpty variant
+00:09 +314: /home/user/DataKollecta/test/services/field_comparator_test.dart: resolveText / resolveTextOrEmpty a checkbox List is comma-joined, not bracketed
+00:10 +315: /home/user/DataKollecta/test/services/field_comparator_test.dart: resolveText / resolveTextOrEmpty an empty List resolves to empty text, not "[]"
+00:10 +316: /home/user/DataKollecta/test/services/field_comparator_test.dart: resolveText / resolveTextOrEmpty a plain String passes through unchanged
+00:10 +317: /home/user/DataKollecta/test/services/field_comparator_test.dart: resolveText / resolveTextOrEmpty a non-String, non-List value is stringified
+00:10 +318: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric equality operators
+00:10 +319: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric ordering operators
+00:10 +320: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric numeric parsing wins over accidental lexicographic ordering
+00:10 +321: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric decimals
+00:10 +322: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric two long IDs differing in the last digit are not equal
+00:10 +323: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric an int and a decimal naming the same value are still equal
+00:10 +324: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- numeric a 0x-prefixed string now parses as a number
+00:10 +325: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- dates date-only strings, ordering and equality
+00:10 +326: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- dates a datetime and a date-only string at the same moment are equal
+00:10 +327: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- dates this is the tier a plain-string comparison would get wrong
+00:10 +328: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- plain strings equality
+00:10 +329: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- plain strings ordering falls back to lexicographic comparison
+00:10 +330: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- contains / does not contain membership in a comma-joined checkbox answer
+00:10 +331: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- contains / does not contain membership in a plain comma-separated string answer
+00:10 +332: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- contains / does not contain an empty left side contains nothing
+00:10 +333: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- contains / does not contain contains is case-sensitive to the exact stored value
+00:10 +334: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- operator synonyms == behaves identically to =
+00:10 +335: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- operator synonyms <> behaves identically to !=
+00:10 +336: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- operator synonyms HTML-entity-encoded operators decode before comparison
+00:10 +337: /home/user/DataKollecta/test/services/field_comparator_test.dart: compare -- unrecognized operator returns false rather than throwing
+00:10 +338: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: loading the snapshot reads one signature per existing record
+Loaded 2 existing primary keys for duplicate check
+00:10 +339: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: loading the snapshot is empty when the table declares no primary key
+00:10 +340: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: loading the snapshot lowercases both sides, so worksheet case cannot break it
+Loaded 1 existing primary keys for duplicate check
+00:10 +341: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate reports a key that already exists
+Loaded 1 existing primary keys for duplicate check
+00:10 +342: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate does not report a key that differs in any part
+Loaded 1 existing primary keys for duplicate check
+00:10 +343: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate a half-typed key is never a duplicate
+Loaded 1 existing primary keys for duplicate check
+00:10 +344: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate an empty snapshot never reports a duplicate
+Loaded 0 existing primary keys for duplicate check
+00:10 +345: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate the empty constant never reports a duplicate
+00:10 +346: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate matches an answer whose key differs in case from the worksheet
+Loaded 1 existing primary keys for duplicate check
+00:10 +347: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isDuplicate compares as text, so 01 and 1 are different keys
+Loaded 1 existing primary keys for duplicate check
+00:10 +348: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: isKeyField is case-insensitive in both directions
+Loaded 0 existing primary keys for duplicate check
+00:10 +349: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: answerFor prefers an exact key before falling back to case-insensitive
+00:10 +350: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: answerFor finds a differently-cased key
+00:10 +351: /home/user/DataKollecta/test/services/duplicate_key_service_test.dart: answerFor returns null when nothing matches
+00:11 +352: /home/user/DataKollecta/test/services/ftp_service_test.dart: upload failure message the prose follows the build language
+00:11 +353: /home/user/DataKollecta/test/services/ftp_service_test.dart: upload failure message the stage name stays in English in both builds
+00:11 +354: /home/user/DataKollecta/test/services/ftp_service_test.dart: upload failure message every prose message is translated in the French build
+00:11 +355: /home/user/DataKollecta/test/services/ftp_service_test.dart: Uganda FTP host fallback uses the controlled hostname first
+[FtpService] interviewer -> /
+[FtpService] FTP connection attempt: ftp-sync.idrcdata.org
+[FtpService] FTP connection succeeded: ftp-sync.idrcdata.org
+00:12 +356: /home/user/DataKollecta/test/services/ftp_service_test.dart: Uganda FTP host fallback uses the provider hostname once after a primary connection failure
+[FtpService] interviewer -> /
+[FtpService] FTP connection attempt: ftp-sync.idrcdata.org
+[FtpService] FTP connection failed: ftp-sync.idrcdata.org (FTPException: Could not connect (Response: null))
+[FtpService] FTP fallback connection attempt: ftp-4fa9bafd.registeredsite.com
+[FtpService] FTP fallback connection succeeded: ftp-4fa9bafd.registeredsite.com
+00:12 +357: /home/user/DataKollecta/test/services/ftp_service_test.dart: Uganda FTP host fallback returns failure after both current hosts fail
+[FtpService] interviewer -> /
+[FtpService] FTP connection attempt: ftp-sync.idrcdata.org
+[FtpService] FTP connection failed: ftp-sync.idrcdata.org (FTPException: Could not connect (Response: null))
+[FtpService] FTP fallback connection attempt: ftp-4fa9bafd.registeredsite.com
+[FtpService] FTP fallback connection failed: ftp-4fa9bafd.registeredsite.com (FTPException: Could not connect (Response: null))
+00:12 +358: /home/user/DataKollecta/test/services/ftp_service_test.dart: Uganda FTP host fallback does not fall back after an explicit authentication rejection
+[FtpService] interviewer -> /
+[FtpService] FTP connection attempt: ftp-sync.idrcdata.org
+[FtpService] FTP connection failed: ftp-sync.idrcdata.org (FTPException: Wrong password (Response: 530))
+00:12 +359: /home/user/DataKollecta/test/services/base_form_id_generation_test.dart: a generated key is generated when no parent supplies it
+00:12 +360: /home/user/DataKollecta/test/services/base_form_id_generation_test.dart: a linking value inherited from a parent is left alone
+00:12 +361: /home/user/DataKollecta/test/services/base_form_id_generation_test.dart: the exclusion is case-insensitive, as a hand-typed cell requires
+00:12 +362: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +363: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +364: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +365: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +366: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +367: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +368: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+Generated ID: 107001
+00:13 +369: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +370: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +371: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +372: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +373: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +374: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig generates an ID from its component answers
+00:13 +375: /home/user/DataKollecta/test/services/csv_data_service_test.dart: quoting leading zeros on fixed-length codes are preserved
+00:13 +376: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig falls back to -9 when a component answer is missing
+00:13 +377: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig falls back to -9 when a component answer is missing
+00:13 +378: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig falls back to -9 when a component answer is missing
+00:13 +379: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig preserves an existing ID in edit mode while components agree
+[IdGenerator] Comparing bases: existing="107" current="107"
+00:13 +380: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig regenerates in edit mode once a component answer changes
+[IdGenerator] Comparing bases: existing="107" current="207"
+Generated ID: 207001
+00:13 +381: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with an idconfig a linking or increment field is never treated as an ID to generate
+00:13 +382: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with no idconfig goes through AutoFields and writes into the map
+00:13 +383: /home/user/DataKollecta/test/services/automatic_field_service_test.dart: a field with no idconfig an ID-shaped field with no idconfig is not generated
+00:13 +384: /home/user/DataKollecta/test/services/db_service_change_log_test.dart: the settings read really does fail here
+00:13 +385: /home/user/DataKollecta/test/services/db_service_change_log_test.dart: updateInterview still records the full audit trail, minus the id
+[DbService ERROR] Could not read surveyor id for change log: MissingPluginException(No implementation found for method getAll on channel plugins.flutter.io/shared_preferences)
+[DbService ERROR] Failed to write backup: MissingPluginException(No implementation found for method getApplicationSupportDirectory on channel plugins.flutter.io/path_provider)
+00:13 +386: /home/user/DataKollecta/test/services/db_service_change_log_test.dart: updateField behaves the same way, as it always has
+[DbService ERROR] Could not read surveyor id for change log: MissingPluginException(No implementation found for method getAll on channel plugins.flutter.io/shared_preferences)
+[DbService] Updated visit.count from 3 to 4
+00:14 +387: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login sends exactly the fields the deployed app-login function expects
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:14 +388: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login parses the project object and each survey's manifest
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:14 +389: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login still works when project and manifest are both absent
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:14 +390: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login maps 401 to SyncAuthException
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 401
+00:14 +391: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login maps 404 (unknown project code) to SyncAuthException
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 404
+00:14 +392: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login maps 429 to SyncThrottledException, not to an auth failure
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 429
+00:14 +393: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login 429 is not classified as a retryable transfer failure
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 429
+00:14 +394: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login 429 with no error field still carries usable copy
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 429
+[ApiClient] error response was not valid JSON
+00:14 +395: /home/user/DataKollecta/test/services/sync/api_client_test.dart: postSync maps 429 to SyncThrottledException
+[ApiClient] POST sync -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-sync
+[ApiClient] sync <- 429
+00:14 +396: /home/user/DataKollecta/test/services/sync/api_client_test.dart: postSync keeps 413 (batch too large) retryable
+[ApiClient] POST sync -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-sync
+[ApiClient] sync <- 413
+00:14 +397: /home/user/DataKollecta/test/services/sync/api_client_test.dart: login maps a 500 to SyncTransferException
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 500
+00:14 +398: /home/user/DataKollecta/test/services/sync/api_client_test.dart: a hung connection times out as SyncConnectionException, not a hang
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+00:14 +399: /home/user/DataKollecta/test/services/sync/api_client_test.dart: postSync omits the formchanges key entirely when there are none
+[ApiClient] POST sync -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-sync
+[ApiClient] sync <- 200
+00:14 +400: /home/user/DataKollecta/test/services/sync/api_client_test.dart: postSync parses partial success -- some synced, some failed
+[ApiClient] POST sync -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-sync
+[ApiClient] sync <- 200
+00:14 +401: /home/user/DataKollecta/test/services/sync/api_client_test.dart: postSync maps 401 (expired session) to SyncAuthException
+[ApiClient] POST sync -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-sync
+[ApiClient] sync <- 401
+00:14 +402: /home/user/DataKollecta/test/services/sync/api_client_test.dart: a download failure (non-200) never touches the local filesystem
+[ApiClient] GET download (signed URL)
+[ApiClient] download <- 404, 9 bytes
+00:14 +403: /home/user/DataKollecta/test/services/sync/api_client_test.dart: a download timeout raises SyncConnectionException
+[ApiClient] GET download (signed URL)
+00:14 +404: /home/user/DataKollecta/test/services/sync/api_client_test.dart: nothing logged during login or sync contains the password, token, or a record value
+00:14 +405: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.isValid a token with plenty of time left is valid
+00:14 +406: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.isValid a token already past its expiry is invalid
+00:14 +407: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.isValid a token inside the skew margin is treated as invalid, not just-barely-valid
+00:14 +408: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.isValid a token just outside the skew margin is still valid
+00:14 +409: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.isValid no token at all is invalid regardless of expiresAt
+00:14 +410: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.isValid a token with no expiresAt is invalid
+00:14 +411: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSession.withoutToken keeps every credential field and drops only the token
+00:14 +412: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument encode/decode round-trips sessions and associations through JSON
+00:14 +413: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument encode/decode decoding null or empty returns an empty document, not an error
+00:14 +414: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument encode/decode decoding garbage JSON returns an empty document rather than throwing
+[ProjectSessions] Ignoring corrupt document: FormatException: Unexpected character (at character 2)
+{not valid json
+ ^
+
+00:14 +415: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument encode/decode decoding a document with the wrong top-level shape returns empty
+00:14 +416: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument encode/decode a malformed individual session entry is skipped, not fatal to the whole document
+00:14 +417: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation withSession adds a new project and withSession again replaces it
+00:14 +418: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation withoutSession removes the session but leaves associations intact
+00:14 +419: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation withAssociation binds a new surveyId
+00:14 +420: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation withAssociation is idempotent for the same project
+00:14 +421: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation withAssociation refuses to rebind a surveyId to a different project
+00:14 +422: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation withoutAssociation removes just that one binding
+00:14 +423: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsDocument mutation surveysFor lists every survey bound to a project
+00:14 +424: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsRepository load() decodes whatever the injected read closure returns
+00:14 +425: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsRepository update() persists the result of applying the function
+00:14 +426: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsRepository update() propagates a thrown conflict without writing anything
+00:14 +427: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsRepository two concurrent updates against the same backing store both survive -- neither drops the other's change
+00:14 +428: /home/user/DataKollecta/test/services/sync/project_sessions_test.dart: ProjectSessionsRepository a failed update does not wedge the queue for the next caller
+00:14 +429: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: nothing to upload makes no send calls and does not stop early
+00:14 +430: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: every row across every batch succeeds and gets marked synced
+00:14 +431: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: the cursor is strictly monotonic across batches
+00:14 +432: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a partially failed batch marks the successes and records the failure
+00:14 +433: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a server that fails every batch terminates within a bounded number of send calls instead of hanging (regression test for the reference branch's infinite-retry defect)
+00:14 +434: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a batch that "succeeds" over HTTP but syncs nothing also trips the circuit breaker (no exception needed)
+00:14 +435: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a session-expired batch stops the run immediately, no further fetches
+00:14 +436: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a throttled batch stops the run instead of spending its retries
+00:14 +437: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a throttle is reported as its own stop reason, not as too many failures
+00:14 +438: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: a success after earlier failures resets the circuit breaker
+00:14 +439: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: two rows sharing one wireId (a duplicate-uniqueid pair, e.g. the historical double-tap-save bug) both get marked synced, not just whichever one a naive wireId -> rowId map happened to keep
+00:14 +440: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: uploadSurvey against a real SQLite database a genuine unsynced row is read with a real int rowid and gets marked synced end-to-end (the happy path this file had zero real-database coverage for before)
+00:14 +441: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: uploadSurvey against a real SQLite database two rows sharing one uniqueid (an edit swept both back to synced_at = null) both get marked synced after upload, mirroring the real subject 21040040057 scenario
+00:14 +442: /home/user/DataKollecta/test/services/sync/record_uploader_test.dart: uploadSurvey against a real SQLite database a formchanges row is uploaded and marked synced, not skipped as malformed (regression test for the changeid/rowid column collision: formchanges' own INTEGER PRIMARY KEY is named changeid, not rowid, so SELECT rowid, * used to report the alias under the name "changeid" -- identical to the real changeid column from *, which silently swallowed the rowid key and made every row look malformed)
+00:15 +443: /home/user/DataKollecta/test/services/sync/device_identity_test.dart: a non-empty native id is returned as-is, without touching storage
+00:15 +444: /home/user/DataKollecta/test/services/sync/device_identity_test.dart: a null native id falls back to a persisted id when one exists
+00:15 +445: /home/user/DataKollecta/test/services/sync/device_identity_test.dart: an empty native id is treated the same as a missing one
+00:15 +446: /home/user/DataKollecta/test/services/sync/device_identity_test.dart: no native id and nothing persisted generates and persists a new id
+00:15 +447: /home/user/DataKollecta/test/services/sync/device_identity_test.dart: the fallback id is never the literal string "unknown"
+00:16 +448: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveLocalFilename strips a numeric timestamp prefix from the signed URL's filename
+00:16 +449: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveLocalFilename leaves a filename with no numeric prefix untouched
+00:16 +450: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveLocalFilename does not strip a prefix that only looks numeric-ish
+00:16 +451: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveLocalFilename falls back to "<surveyName>.zip" for a malformed URL
+00:16 +452: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveLocalFilename falls back to "<surveyName>.zip" when the URL has no path segments
+00:16 +453: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken a survey bound to a project with a still-valid token uses it directly, no login
+00:16 +454: /home/user/DataKollecta/test/services/skip_service_test.dart: evaluateSkip onEvaluated reports a rule that fired
+00:16 +455: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken an expired token triggers a silent re-login with that project's own credentials
+00:16 +456: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken an expired token triggers a silent re-login with that project's own credentials
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+00:16 +457: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken an expired token triggers a silent re-login with that project's own credentials
+00:16 +458: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken an expired token triggers a silent re-login with that project's own credentials
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+00:16 +459: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken an expired token triggers a silent re-login with that project's own credentials
+00:16 +460: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken an expired token triggers a silent re-login with that project's own credentials
+[ApiClient] login <- 200
+00:16 +461: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken a token about to expire within the skew margin also triggers a refresh
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:16 +462: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken a survey with no recorded project adopts the one configured project, without persisting the guess
+00:16 +463: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken a survey with no recorded project and more than one configured project fails routing rather than guessing
+00:16 +464: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken a survey bound to a project with no configured session at all fails routing
+00:16 +465: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken a silent re-login that fails (e.g. a rotated password) fails routing cleanly
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 401
+[HttpSyncBackend] silent re-login failed for proj-a: Invalid username or password
+00:16 +466: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken failure kinds an unreachable server is noConnection, never "wrong password"
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[HttpSyncBackend] silent re-login failed for proj-a: Could not reach server: Instance of '_Unreachable'
+00:16 +467: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: resolveToken failure kinds a throttled or failing server is loginUnavailable
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 429
+[HttpSyncBackend] silent re-login failed for proj-a: nope
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 500
+[HttpSyncBackend] silent re-login failed for proj-a: Login failed (500)
+00:16 +468: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: uploadPending recovering from a server-rejected token discards the rejected token and retries with a fresh login, instead of resending the same token
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:16 +469: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: uploadPending recovering from a server-rejected token reports loginFailed when the stored credentials are rejected too, keeping the stored username/password for the user to fix
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 401
+[HttpSyncBackend] silent re-login failed for proj-a: Invalid project code, username, or password
+00:16 +470: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: addProject (add or update credentials) re-adding an existing project code replaces its credentials and token
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:16 +471: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: addProject (add or update credentials) rejected or unverifiable credentials store nothing
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 401
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 401
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+00:16 +472: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: checkAllForUpdates one project failing does not suppress another project's surveys
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 500
+[HttpSyncBackend] check failed for broken-project: Login failed (500)
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 200
+00:16 +473: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: collision guard (surveyId only -- no databaseName, so no filesystem access) downloading a surveyId already bound to a different project is refused
+00:16 +474: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: collision guard (surveyId only -- no databaseName, so no filesystem access) re-downloading a surveyId already bound to the SAME project is not a conflict
+00:16 +475: /home/user/DataKollecta/test/services/sync/http_sync_backend_test.dart: collision guard (surveyId only -- no databaseName, so no filesystem access) a project that failed the last Check for Updates cannot be downloaded from
+[DeviceIdentity] Platform device id lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[HttpSyncBackend] device info lookup failed: MissingPluginException(No implementation found for method getDeviceInfo on channel dev.fluttercommunity.plus/device_info)
+[ApiClient] POST login -> qetzeqyuuiposzseqwvb.supabase.co/functions/v1/app-login
+[ApiClient] login <- 500
+[HttpSyncBackend] check failed for broken: Login failed (500)
+00:16 +476: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.hasTrailingDecimalSeparator rejects values ending with a decimal separator
+00:17 +477: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.hasTrailingDecimalSeparator allows whole numbers and completed decimals
+00:17 +478: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isIncompleteDecimal a decimal field is blocked mid-number
+00:17 +479: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isIncompleteDecimal a decimal field without a range check is still blocked
+00:17 +480: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isIncompleteDecimal a completed or whole number passes
+00:17 +481: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isIncompleteDecimal an empty field is not incomplete — it is unanswered
+00:17 +482: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isIncompleteDecimal a range check makes any field numeric enough to block
+00:17 +483: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isIncompleteDecimal a plain text field with no range check is left alone
+00:17 +484: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isWithinRange accepts values inside the declared range
+00:17 +485: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isWithinRange rejects values below LowerRange
+00:17 +486: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isWithinRange rejects values above UpperRange
+00:17 +487: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isWithinRange accepts an out-of-range value listed in other_values
+00:17 +488: /home/user/DataKollecta/test/services/numeric_validation_service_test.dart: NumericValidationService.isWithinRange a half-declared range only constrains the end it declares
+00:17 +489: /home/user/DataKollecta/test/services/survey_version_extraction_test.dart: a new version installs alongside the old one, sharing its database
+[SurveyConfig] Found 1 zips in /tmp/survey_version_extractionQYKFIW/DataKollecta/zips
+[SurveyConfig] Extracting prism_css_v1.zip to /tmp/survey_version_extractionQYKFIW/DataKollecta/surveys/prism_css_v1
+[SurveyConfig] Found 2 zips in /tmp/survey_version_extractionQYKFIW/DataKollecta/zips
+[SurveyConfig] Extracting prism_css_v2.zip to /tmp/survey_version_extractionQYKFIW/DataKollecta/surveys/prism_css_v2
+00:17 +490: /home/user/DataKollecta/test/services/survey_version_extraction_test.dart: a different project's survey may not claim an in-use database
+[SurveyConfig] Found 1 zips in /tmp/survey_version_extractionXKONMW/DataKollecta/zips
+[SurveyConfig] Extracting prism_css_v1.zip to /tmp/survey_version_extractionXKONMW/DataKollecta/surveys/prism_css_v1
+[SurveyConfig] Found 2 zips in /tmp/survey_version_extractionXKONMW/DataKollecta/zips
+[SurveyConfig] Refusing to extract other_study.zip: databaseName "prism_css.sqlite" is used by survey "prism_css_v1" in project "prism", but this zip belongs to project "other".
+00:17 +491: /home/user/DataKollecta/test/services/survey_version_extraction_test.dart: GiSTX allows two surveyIds on one database, with no project tracking
+00:17 +491 ~1: /home/user/DataKollecta/test/services/survey_version_extraction_test.dart: a side-loaded zip with no known project is allowed through
+[SurveyConfig] Found 1 zips in /tmp/survey_version_extractionTXCFTQ/DataKollecta/zips
+[SurveyConfig] Extracting prism_css_v1.zip to /tmp/survey_version_extractionTXCFTQ/DataKollecta/surveys/prism_css_v1
+[SurveyConfig] Found 2 zips in /tmp/survey_version_extractionTXCFTQ/DataKollecta/zips
+[SurveyConfig] Extracting prism_css_v2.zip to /tmp/survey_version_extractionTXCFTQ/DataKollecta/surveys/prism_css_v2
+00:17 +492 ~1: /home/user/DataKollecta/test/services/settings_service_test.dart: getSurveyorIdOrGlobal prefers the survey-specific Surveyor ID when one is set
+00:17 +493 ~1: /home/user/DataKollecta/test/services/settings_service_test.dart: getSurveyorIdOrGlobal falls back to the global Surveyor ID when none is saved for the survey
+00:17 +494 ~1: /home/user/DataKollecta/test/services/settings_service_test.dart: getSurveyorIdOrGlobal returns null when neither a survey-specific nor a global value exists
+00:17 +495 ~1: /home/user/DataKollecta/test/services/settings_service_test.dart: getSurveyorIdOrGlobal one Surveyor ID can be associated with more than one survey
+00:17 +496 ~1: /home/user/DataKollecta/test/services/settings_service_test.dart: saveAllSettings never touches a per-survey record
+00:18 +497 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: case calculation against a checkbox field a single checkbox selection matches a literal exactly
+[AutoFields] Error loading version from pubspec.yaml: Binding has not yet been initialized.
+The "instance" getter on the ServicesBinding binding mixin is only available once that binding has been initialized.
+Typically, this is done by calling "WidgetsFlutterBinding.ensureInitialized()" or "runApp()" (the latter calls the former). Typically this call is done in the "void main()" method. The "ensureInitialized" method is idempotent; calling it multiple times is not harmful. After calling that method, the "instance" getter will return the binding.
+In a test, one can call "TestWidgetsFlutterBinding.ensureInitialized()" as the first line in the test's "main()" method to initialize the binding.
+If ServicesBinding is a custom binding mixin, there must also be a custom binding class, like WidgetsFlutterBinding, but that mixes in the selected binding, and that is the class that must be constructed before using the "instance" getter.
+00:18 +498 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: case calculation against a checkbox field a real selection (99 not among them) still excludes
+00:18 +499 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: case calculation against a checkbox field a plain radio answer is unaffected by the fix
+00:18 +500 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: case calculation against a checkbox field an unanswered checkbox field is treated as empty, not "[]"
+00:18 +501 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: lookup calculation against a checkbox field copies the joined value, not the bracketed one
+00:18 +502 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: contains / does not contain in a case calculation contains finds a value regardless of what else was selected
+00:18 +503 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: contains / does not contain in a case calculation does not contain negates membership
+00:18 +504 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) yyyy is today's value, zero-padded to 4 digits
+00:18 +505 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) yy is today's value, zero-padded to 2 digits
+00:18 +506 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) mm is today's value, zero-padded to 2 digits
+00:18 +507 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) dd is today's value, zero-padded to 2 digits
+00:18 +508 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) doy is today's value, zero-padded to 3 digits
+00:18 +509 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) editing an existing record preserves stale values unconditionally, for every field
+00:18 +510 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) a stale value is preserved even outside edit mode
+00:18 +511 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: Computed Automatic Variables (yyyy/yy/mm/dd/doy) a brand new record with no stored value computes fresh
+00:18 +512 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation extracts each unit from a named date field
+00:18 +513 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation unit is matched case-insensitively
+00:18 +514 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation field:today behaves like the equivalent Computed Automatic Variable
+00:18 +515 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation an unanswered source field produces an empty result
+00:18 +516 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation an unparseable date value produces an empty result
+00:18 +517 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation an unrecognized unit produces an empty result
+00:18 +518 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation without preserve, editing recomputes from a changed source field -- the contrast with the Computed Automatic Variable flavor
+00:18 +519 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: date_part calculation preserve:true keeps the stored value even if the source changes
+00:18 +520 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: timestamp calculation stamps the current date-and-time when the row is reached
+00:18 +521 ~1: /home/user/DataKollecta/test/services/auto_fields_test.dart: timestamp calculation freezes on first capture -- an edit-mode revisit keeps it
+00:18 +522 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the ordinary path a declared child is planned with its count and linking value
+00:18 +523 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the ordinary path the whole crfs row is carried through
+00:18 +524 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the ordinary path falls back to the table name when there is no display name
+00:18 +525 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the ordinary path accepts auto_start_repeat as a string as well as an int
+00:18 +526 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: ordering children are planned in display_order, not crfs order
+00:18 +527 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: ordering a missing display_order sorts as 0
+00:18 +528 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the four ways a child drops out, silently no repeat count field declared
+00:18 +529 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the four ways a child drops out, silently the count field has no answer
+00:18 +530 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the four ways a child drops out, silently the count is zero, negative or not a number
+00:18 +531 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: the four ways a child drops out, silently no linking field, or no value for it
+00:18 +532 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: what is not a child of this form a form belonging to a different parent
+00:18 +533 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: what is not a child of this form a base form, with no parent at all
+00:18 +534 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: what is not a child of this form a child that does not auto-start
+00:18 +535 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: what is not a child of this form a row with no table name
+00:18 +536 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: what is not a child of this form an empty crfs table
+00:18 +537 ~1: /home/user/DataKollecta/test/services/repeat_plan_service_test.dart: several children only the ones that qualify are planned
+00:18 +538 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: nextStep carries on to the next child after one saves
+00:18 +539 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: nextStep finishes once the last requested child saves
+00:18 +540 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: nextStep force mode insists rather than letting the loop end
+00:18 +541 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: nextStep force mode ignores the minimum gate, having already refused
+00:19 +542 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: nextStep every other mode lets the interviewer leave
+00:19 +543 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: nextStep but not below the count question own floor
+00:19 +544 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: run opens the child once per requested record
+00:19 +545 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: run retries the same index in force mode, not the next one
+00:19 +546 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: run stops early when a mode that allows it is abandoned
+00:19 +547 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: run reports a livelock instead of hanging
+00:19 +548 ~1: /home/user/DataKollecta/test/services/repeat_loop_runner_test.dart: run stops when the caller has gone away, without reconciling
+00:19 +549 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: bumpBuildNumber increments the build number and leaves the release name alone
+00:19 +550 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: bumpBuildNumber never touches MAJOR.MINOR.PATCH
+00:19 +551 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: bumpBuildNumber carries a pre-release suffix through untouched
+00:19 +552 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: bumpBuildNumber a version with no build number starts counting
+00:19 +553 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: bumpBuildNumber the counter crosses into double and triple digits
+00:19 +554 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: bumpBuildNumber an unparseable version is rejected rather than guessed at
+00:19 +555 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: versionLinePattern captures the version from a real pubspec line
+00:19 +556 ~1: /home/user/DataKollecta/test/tool/update_version_test.dart: versionLinePattern does not match an indented key that merely ends in "version"
+00:19 +557 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +558 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +559 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +560 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +561 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +562 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +563 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +564 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +565 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +566 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +567 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +568 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +569 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +570 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +571 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +572 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +573 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +574 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +575 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: radio special responses use the build language
+00:20 +576 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +577 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +578 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +579 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +580 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +581 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +582 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +583 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +584 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +585 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +586 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +587 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +588 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +589 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: checkbox special responses use the build language
+00:20 +590 ~1: /home/user/DataKollecta/test/widgets/question_view_special_responses_test.dart: the regular option keeps its own label
+00:20 +591 ~1: All tests passed!
+exit=0

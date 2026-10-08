@@ -1,0 +1,5 @@
+test-assets/build/
+test-assets/valtest_config*.json
+__pycache__/
+*.pyc
+~$*

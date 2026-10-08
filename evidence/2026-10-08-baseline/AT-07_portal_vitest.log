@@ -1,0 +1,531 @@
+# env: VITE_SUPABASE_URL=http://127.0.0.1:54321 VITE_SUPABASE_ANON_KEY=dummy (unit tests make no network calls)
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vite.config.ts:14:65). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+12:58:19 PM [vite] warning: `optimizeDeps.esbuildOptions` option was specified by "vite:react-swc" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+
+ RUN  v4.1.11 /home/user/DataKollecta-Web
+
+ ✓ src/lib/xml/__tests__/edge.test.ts > round trip > is idempotent 10ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > round trip > strips system fields and the end screen from the authored list 7ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > round trip > treats the stock end-screen wording as generated, not custom 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > calculation types > parses a constant of zero rather than dropping it 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > calculation types > round-trips date_part with its unit 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > calculation types > round-trips date_offset 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > calculation types > round-trips preserve 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > calculation types > round-trips query sql and parameters 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > structured math and concat > parses operands into parts 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > structured math and concat > emits operands as <part>, never <result> 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > structured math and concat > handles nesting to arbitrary depth 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > structured math and concat > keeps a nested concat separator 1ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > case results > keeps a constant result of zero 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > case results > supports a non-constant result, which the app has always accepted 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > case results > supports a non-constant else 7ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > case results > emits case results as <result>, never <part> 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > values of zero survive > keeps a numeric floor of 0 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > values of zero survive > keeps a response option valued 0 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > values of zero survive > keeps a dynamic list's dont_know value of 0 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > values of zero survive > keeps a filter value of 0 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > width encoding > decodes '=3' as a fixed length and re-encodes it 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > width encoding > decodes a plain '10' as a maximum, not a fixed length 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > width encoding > round-trips numeric_range, which no generator wrote before 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > escaping and text > round-trips text containing every character that needs escaping 2ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > escaping and text > keeps a placeholder reference in a filter value 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > logic checks > collapses the multi-line `or` layout into one expression 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > logic checks > recovers the message from the legacy semicolon form 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > logic checks > re-emits it with the message as an attribute 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > skips and special values > round-trips preskip and postskip 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > skips and special values > round-trips dont_know and refuse 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > skips and special values > round-trips optional 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > skips and special values > leaves optional unset (not false) when absent 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > age_at_date normalization > rewrites the deprecated age_from_date the way the app does at runtime 0ms
+ ✓ src/lib/xml/__tests__/edge.test.ts > age_at_date normalization > converts a legacy 'y' unit into the word the app matches on 0ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > reads the manifest and returns the surveyId 29ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > finds the manifest when the zip has a folder prefix 4ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > refuses a zip with no manifest 3ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > refuses a manifest that is not JSON 20ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > refuses a manifest with no crfs key 2ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > refuses a manifest whose crfs array is empty 14ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > refuses a manifest whose crfs is not an array 6ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > readManifestFromZip > refuses a manifest with no surveyId 1ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > buildCrfRows > builds one row per crfs entry, carrying the ids it was given 6ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > buildCrfRows > applies the documented defaults for absent optional fields 2ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > buildCrfRows > nests _formConfig inside an existing idconfig rather than replacing it 1ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > buildCrfRows > skips a form whose xml is missing from the zip, and warns 2ms
+ ✓ src/lib/__tests__/surveyPackageUpload.test.ts > buildCrfRows > keeps the manifest's crfs order 2ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > parses to a non-trivial question list 23ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > is idempotent: parse(generate(parse(x))) equals parse(x) 49ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > regenerates every authored question, in order 39ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > versionedSurveyId > names the designer-minted survey ID for a version 7ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > deriveSurveyCode > strips a trailing version suffix so codes do not compound 1ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > deriveSurveyCode > leaves an ID with no version suffix alone 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > deriveSurveyCode > leaves the team's dated IDs alone -- an uploaded package keeps its own ID 1ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > deriveSurveyCode > does not mistake a mid-string _v<N> for a suffix 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > nextVersionNumber > starts a fresh lineage at 1 1ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > nextVersionNumber > takes the max rather than the count, so a deleted draft leaves a gap 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > nextVersionNumber > is order-independent 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > versionedDisplayName > leaves version 1 alone -- it may be deployed and locked 1ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > versionedDisplayName > distinguishes later versions 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > versionedDisplayName > does not compound when versioning a version 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > versionedDisplayName > gives every version of a lineage a distinct name 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > stripVersionSuffix > removes only a trailing version marker 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > formatVersionLabel > leads with the number and carries the date 29ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > formatVersionLabel > degrades to the number alone on an unparseable date 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > groupByLineage > groups versions of one survey and puts the newest first 1ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > groupByLineage > orders by version number, not by date -- two revisions can share a day 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > groupByLineage > keeps separate codes as separate lineages 1ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > groupByLineage > returns nothing for no surveys 0ms
+ ✓ src/lib/__tests__/surveyVersion.test.ts > versionByPackageId > maps package ids to version numbers for the merged CSV export 0ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > preserves every calculation node exactly 34ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > preserves response blocks exactly 42ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > preserves skip logic exactly 73ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > enrollee.xml > never emits two <responses> blocks in one question 26ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > parses to a non-trivial question list 2ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > is idempotent: parse(generate(parse(x))) equals parse(x) 8ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > regenerates every authored question, in order 6ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > preserves every calculation node exactly 5ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > preserves response blocks exactly 6ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > preserves skip logic exactly 5ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > vaccination_status.xml > never emits two <responses> blocks in one question 6ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > the parent link on a child form > emits it once, as the app needs it to declare the foreign key 3ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > the parent link on a child form > sits after the trailing block and before the end screen, as SurveyGen writes it 2ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > the parent link on a child form > does not accumulate across a generate/parse/generate cycle 9ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > the parent link on a child form > is absent from the base form in the same package 48ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > consumer-shape invariants > emits uniqueid, without which no record can ever sync 0ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > consumer-shape invariants > puts starttime and startdate before the first authored question 0ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > consumer-shape invariants > puts the trailing system fields after the last authored question and before the end screen 0ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > consumer-shape invariants > gives each system field the fieldtype the app expects 0ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > consumer-shape invariants > every <when> has exactly one <result> 2ms
+ ✓ src/lib/xml/__tests__/roundTrip.test.ts > consumer-shape invariants > every age_at_date carries a separator and a unit the app understands 1ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > per-question identity, shape, responses, calculation > covers fieldname, text, and mask rules 6ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > per-question identity, shape, responses, calculation > covers width, range, field-type, and special-answer rules 2ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > per-question identity, shape, responses, calculation > covers response-list rules 1ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > per-question identity, shape, responses, calculation > covers calculation-missing and operand rules 2ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > reference integrity and ordering > covers logic-check, calculation, and placeholder reference rules 2ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > reference integrity and ordering > covers every skip tested-field and target rule 1ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > cross-form and package rules > covers manifest field and linking-field rules 1ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > cross-form and package rules > covers table-name, parent-chain, base-form, and package-identity rules 1ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > comparison semantics, shape additions, cross-form fields > covers logic operators, literals, skip values, csv columns, date order, mask length, redefined fields 2ms
+ ✓ src/lib/validation/__tests__/catalogue.test.ts > every declared rule id was produced by at least one package above 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > takes the union across submissions 3ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > follows the declared order rather than the alphabet 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > appends a column no version declares, sorted, at the end 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > omits a declared question that no row ever answered 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > falls back to sorted order when nothing is declared 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > excludes synced_at, which is always empty on the server 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > submissionColumns > tolerates a row with no data at all 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > adds back the reserved system fields stripped on import, in XML order 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > keeps the authored questions in declaration order, not alphabetical 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > matches the order the generator writes into the XML 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > puts parent_uniqueid after the trailing system fields 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > drops information questions, which declare no column 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > includes parent_uniqueid only for a form with a parent 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > never declares synced_at, even if a stored field list names it 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > ignores a nameless question rather than emitting a blank column 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > declaredColumns > returns the system fields alone for a null field list 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > leads with the meta columns, then the data columns 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > stamps survey_version from the package map 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > labels every row test or deployed, whatever the export filter was 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > writes a header-only CSV for a form with no rows 1ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > gives an empty form the same header as the same form with a row 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > takes membership from the rows and order from the declared columns 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildSubmissionsCsv > writes each row's cells under the header they belong to 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > orderRecordEntries > reads a record in question order rather than jsonb key order 5ms
+ ✓ src/lib/__tests__/dataExport.test.ts > orderRecordEntries > drops synced_at, which is NULL on the server by construction 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > orderRecordEntries > keeps a value no version declares, at the end 0ms
+ ✓ src/lib/__tests__/dataExport.test.ts > buildFormChangesCsv > writes the audit columns in a fixed order 0ms
+ ✓ src/lib/__tests__/exportManifest.test.ts > export integrity manifest > matches a standard SHA-256 vector and includes UTF-8 byte length 9ms
+ ✓ src/lib/__tests__/exportManifest.test.ts > export integrity manifest > verifies exact bytes recovered from the downloaded ZIP, including BOM and Unicode 7ms
+ ✓ src/lib/__tests__/exportManifest.test.ts > export integrity manifest > records the portal release and commit that produced the export 1ms
+ ✓ src/lib/__tests__/exportManifest.test.ts > export integrity manifest > changes the checksum when a clinical value changes and orders filenames deterministically 1ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > getDefaultFieldType > gives a radio an integer fieldtype, because its answer is a code 3ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > getDefaultFieldType > gives a checkbox text, because its answer is a list 0ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > getDefaultFieldType > matches the fieldtype to the type for date and datetime 0ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > getDefaultFieldType > gives an information question n/a, since nothing is stored 0ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > getDefaultFieldType > pins every arm, because QuestionEditor offers no alternative 1ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > shortId > is 8 lowercase hex characters 7ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > shortId > does not collide within a single tick 2ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > createDefaultQuestion > gives every question a unique id and fieldname 1ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > createDefaultQuestion > derives fieldtype from the type 1ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > createDefaultQuestion > gives selection types an empty responses array, and others none 1ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > createDefaultQuestion > sets maxCharacters only for text 0ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > createDefaultForm > gives every form a unique id and tablename 1ms
+ ✓ src/lib/__tests__/surveyFactories.test.ts > createDefaultForm > starts with no questions and enforce mode 1 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > QuestionType x FieldType pairing > allows integer on a text question, despite excel_reader.py currently rejecting it 3ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > QuestionType x FieldType pairing > requires integer on a radio question 1ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > QuestionType x FieldType pairing > requires text on a checkbox question 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > QuestionType x FieldType pairing > requires date or datetime on a date/datetime question 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > QuestionType x FieldType pairing > leaves combobox, information, and calculated unconstrained, matching SurveyGen 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > max characters > requires it on a plain text question 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > max characters > is satisfied once set 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > max characters > is not required for non-text question types 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > max characters > requires exactly =5 for an hourmin field 1ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > max characters > rejects a numeric range on an hourmin field 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > numeric range > is silent when neither bound is set 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > numeric range > flags a half-set range, either direction 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > numeric range > flags an inverted range -- a check SurveyGen never runs at all 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > numeric range > accepts min === max (a fixed single allowed value) 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > numeric range > accepts a real minimum of 0, not confusing it with "unset" 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range > requires both bounds on a date question 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range > accepts 0, a signed offset, and a real calendar date 1ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range > rejects an impossible calendar date 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range > rejects a nonsense value 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range > applies to datetime questions too 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range > does not apply to non-date questions 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > special answers > is silent when none are set 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > special answers > accepts the conventional sentinels 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > special answers > warns on an unconventional value 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > special answers > warns when a special value collides with a static response option 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > special answers > does not port the Excel True/False rule -- the web model stores the emitted sentinel, not the source column value 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range order > reports a maximum before the minimum, comparing offsets as days 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range order > compares a fixed date against an offset 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > date range order > is silent for an ordered range 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > mask length > reports a mask longer than the field 3ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > mask length > reports a fixed-length field whose mask fills a different number 0ms
+ ✓ src/lib/validation/__tests__/shape.test.ts > mask length > is silent for a mask that fits, and a shorter mask on a variable-length field 0ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > fetchAllRows > returns everything in one call when the first page is short 4ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > fetchAllRows > keeps paging past a full page -- the regression this exists for: a table with more rows than the server's max_rows cap must not be silently truncated 5ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > fetchAllRows > stops exactly at a page boundary without an extra empty-page request 2ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > fetchAllRows > returns an empty array for a table with no rows 0ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > fetchAllRows > throws rather than silently returning a partial result on error 1ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > chunkIds > splits into chunks of the given size 1ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > chunkIds > returns a single chunk when under the limit 0ms
+ ✓ src/lib/__tests__/supabasePaging.test.ts > chunkIds > returns an empty array for no ids 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > is the regression test for the incident this engine exists because of: a logic check referencing a field defined later in the form 4ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > allows a logic check to reference its own field 1ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > allows a logic check to reference an EARLIER field 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > allows reading a leading system field (startdate) in a logic check 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > errors when a logic check reads a trailing system field, which is empty during the interview 1ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > warns (not errors) on an unquoted literal comparison value, since it is indistinguishable from a stale reference 1ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > does not flag a QUOTED literal comparison value 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > warns when a validation message contains a [[placeholder]], since messages render literally 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > logic checks > warns on a placeholder in a unique-check message too 1ms
+ ✓ src/lib/validation/__tests__/references.test.ts > the Computed Automatic Variable distinction > a DECLARED yy/doy-style field resolves as authored, with real ordering 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > the Computed Automatic Variable distinction > an UNDECLARED Computed Automatic Variable is a warning, not silently accepted 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > calculations > errors on a calculation field that does not exist on the form 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > calculations > does not treat the "today" sentinel as a field reference 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > calculations > errors on a forward calculation reference (SurveyGen has no equivalent check at all) 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > calculations > errors on a nested math/concat part reference, with the nested path recorded 3ms
+ ✓ src/lib/validation/__tests__/references.test.ts > calculations > reads the age_at_date target date correctly: separator is scanned, value (the unit word) is not 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > calculations > errors when a calculation reads a trailing system field 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > response filters and question text placeholders > errors on an unresolvable [[placeholder]] in a response filter value 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > response filters and question text placeholders > resolves a filter placeholder against an earlier field 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > response filters and question text placeholders > errors on an unresolvable placeholder in question text 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- tested field > errors when a postskip tests a reserved variable (leading OR trailing, unlike logic checks) 1ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- tested field > errors when a postskip tests a field that comes AFTER the current question 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- tested field > errors when a skip tests a nonexistent field 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- tested field > a postskip testing its own field is normal and not an error 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- tested field > a preskip testing its own field IS an error: it cannot fire on a new record, and erases the answer on an existing one 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- tested field > a preskip testing an EARLIER field is fine 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- target field > 'end' is the app's own sentinel, never resolved as a fieldname 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- target field > errors when a skip targets a reserved variable 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- target field > errors when a skip targets the CURRENT question 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- target field > errors when a skip targets an EARLIER question -- a loop back is never valid 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- target field > errors when a skip targets a nonexistent field 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- target field > a forward target is exactly what is required and produces no finding 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- dynamic comparison value > resolves rule.response as a field reference only when response_type is dynamic 0ms
+ ✓ src/lib/validation/__tests__/references.test.ts > skip rules -- dynamic comparison value > does NOT resolve rule.response as a field when response_type is fixed (the default) -- a literal "1" must not be reported as a missing field 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- no-op cases > does nothing when the name is unchanged 2ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- no-op cases > leaves an unrelated field alone 1ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- question text placeholders > rewrites [[oldName]] in question text, case-insensitively 1ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- logic checks > rewrites a bareword in the condition but not inside a quoted literal 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- logic checks > is case-insensitive and only matches whole words 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- unique/numeric check messages > rewrites placeholders in uniqueCheck and numericCheck messages 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- calculations > rewrites a bare field reference 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- calculations > rewrites a [[wrapped]] field reference, keeping the brackets 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- calculations > rewrites placeholders in sql/value/separator 1ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- calculations > rewrites params[].field 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- calculations > rewrites cases[].field (exact, not [[wrapped]]) and recurses into cases[].result 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- calculations > recurses into parts[] for math/concat 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- skip rules > rewrites fieldname and skipToFieldname, leaving the "end" sentinel alone 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- skip rules > rewrites a dynamic response value but not a fixed one 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- dynamic response filters > rewrites a placeholder in a filter value 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- manifest fields > rewrites a name inside comma-separated primaryKey/displayFields 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldInForm -- manifest fields > rewrites incrementField, linkingfield, and idconfig.fields[].name 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldAcrossPackage > renames references within the target form itself, e.g. another question's skip 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldAcrossPackage > rewrites a child form's entry_condition LHS but never its RHS literal 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldAcrossPackage > leaves entry_condition alone when its LHS does not match 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldAcrossPackage > rewrites a child form's repeatCountField 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldAcrossPackage > never touches a form that is not a direct child of the renamed form 0ms
+ ✓ src/lib/xml/__tests__/rename.test.ts > renameFieldAcrossPackage > is a no-op for an unknown formId 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > table names > is silent with a single valid base form 3ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > table names > rejects an invalid table name 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > table names > flags duplicate table names, case-insensitively 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent chain > is silent for a valid two-form parent/child relationship 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent chain > errors when parenttable names a form that does not exist 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent chain > treats a form naming itself as its own parent as a cycle, not a missing parent 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent chain > detects a two-form cycle (A parents B, B parents A) 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent chain > a missing parent is never ALSO reported as a cycle 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > base form count > accepts exactly one base form 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > base form count > errors when every form has a parent (no base form) 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > base form count > accepts multiple independent base forms 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > base form count > accepts several unrelated base forms with no parent/child relations at all 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > base form count > is silent for an empty package (nothing to be wrong yet) 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent field references (entry_condition / repeatCountField) > is silent when both resolve against the parent 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent field references (entry_condition / repeatCountField) > errors when entry_condition's field is not on the parent 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent field references (entry_condition / repeatCountField) > never flags the literal value on the right of "=" 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent field references (entry_condition / repeatCountField) > errors when repeatCountField is not on the parent 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > parent field references (entry_condition / repeatCountField) > is silent when the parent itself is missing -- parentChainFindings owns that error 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > package identity > requires a surveyId 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > package identity > flags a databaseName not ending in .sqlite 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > package identity > is silent when databaseName is unset -- the generator derives one from surveyId 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > foreign-key viability (linkingfield against the parent) > is silent when the linking field is exactly the parent key 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > foreign-key viability (linkingfield against the parent) > errors when the linking field is not a field on the parent 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > foreign-key viability (linkingfield against the parent) > accepts a linking field that is not the parent primary key 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > foreign-key viability (linkingfield against the parent) > accepts a composite linking field naming real parent columns 0ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > foreign-key viability (linkingfield against the parent) > is silent when the parent is missing -- parentChainFindings owns that 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > fields redefined across forms > warns, on both forms, when the same field has different codes 1ms
+ ✓ src/lib/validation/__tests__/packageRules.test.ts > fields redefined across forms > is silent for the same definition twice, for the linking field, and for a calculated copy 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > surveyIdsMatch > matches identical ids case-insensitively 2ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > surveyIdsMatch > does not match a different id of the same length (the SQL LIKE wildcard trap) 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > surveyIdsMatch > does not match a prefix or substring 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > surveyIdConflictMessage > explains the collision within the same project 1ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > surveyIdConflictMessage > explains the collision across projects and names the other project 1ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > translates the account-scoped unique violation (23505) 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > translates the project-scoped unique violation (23505) 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > translates the locked-content check violation via hint 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > explains a version declaring a different database name 1ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > explains a second survey claiming a database already in use 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > explains a database name taken by another account without leaking it 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > translates the delete-locked check violation via hint 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > translates the illegal-transition check violation via hint 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > returns null for an unrecognized error so callers fall back to error.message 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > translateSurveyWriteError > does not misfire on a 23505 for an unrelated constraint 0ms
+ ✓ src/lib/errors/__tests__/surveyErrors.test.ts > SurveyLockedError > carries the survey identity and produces an explanatory message 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > CALC_REQUIRED / CALC_SPEC parity > covers exactly the same calculation types as the generator, so adding one forces a validation decision 4ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > missing calculation > errors on a calculated question with no calculation 1ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > missing calculation > exempts a declared Computed Automatic Variable 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > missing calculation > exempts a field supplied by this form's manifest configuration (e.g. the primary key) 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > missing calculation > does not apply to a non-calculated question 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > missing calculation > is not reached by the parent link at all -- that row is stripped before validation 1ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'constant' } reports each missing operand 2ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'lookup' } reports each missing operand 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'query' } reports each missing operand 1ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'math' } reports each missing operand 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'age_from_date' } reports each missing operand 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'age_at_date', field: 'dob', value: 'years' } reports each missing operand 2ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'date_offset' } reports each missing operand 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'date_diff' } reports each missing operand 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > { type: 'date_part' } reports each missing operand 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > math additionally requires at least 2 parts 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > concat requires at least 1 part 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > case requires at least 1 when condition 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > required operands, one per calculation type > a fully-specified calculation of every type produces no operand findings 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > unit and offset format > rejects an invalid age_at_date unit word 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > unit and offset format > rejects an invalid date_diff unit 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > unit and offset format > rejects a malformed date_offset value 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > unit and offset format > accepts a valid offset 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > nested parts and cases are checked against their own type > reports a missing operand inside a nested math part, with the nested path 0ms
+ ✓ src/lib/validation/__tests__/calculation.test.ts > nested parts and cases are checked against their own type > reports a missing operand inside a case result 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > matches the DB trigger's allowed transition list exactly 3ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > forbids deployed -> draft (the core safety property) 1ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > forbids deployed -> test 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > allows draft -> deployed directly (test is an optional stage) 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > allows test -> draft (freely editable, can be demoted) 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > allows complete -> deployed (reopening collection) 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > has no transition out of complete back to draft or test 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > LEGAL_TRANSITIONS > every status has a defined (possibly empty) transition list 1ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > isSurveyLocked > locks deployed and complete 1ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > isSurveyLocked > leaves draft and test unlocked 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > isSurveyLocked > LOCKED_STATUSES matches isSurveyLocked for every status 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > isSurveyDeletable > draft and test are deletable; deployed and complete are not 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > isSurveyDeletable > DELETABLE_STATUSES is exactly the complement of LOCKED_STATUSES 0ms
+ ✓ src/lib/__tests__/surveyStatus.test.ts > DOWNLOADABLE_STATUSES > is exactly test and deployed 0ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > sameCode > compares numerically when both sides parse, so a padded code matches 3ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > logic-check operators > reports an operator the app does not know 2ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > logic-check operators > accepts every operator the app knows 2ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > logic-check operators > does not read an operator inside a quoted literal 0ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > logic-check literals > reports a literal that is not one of the compared field's codes 1ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > logic-check literals > is silent for a real code, a padded code, and a Don't-know sentinel 0ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > logic-check literals > leaves a field whose codes are unknowable alone 0ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > skip values > reports a skip on a static list value the list does not have 1ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > skip values > says a <> rule on a missing code can only ever fire 1ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > skip values > checks a csv-backed field against the uploaded file's value column 3ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > skip values > counts a declared not-in-list value as a code 0ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > skip values > ignores ordering operators, dynamic comparisons, and a value the csv holds 0ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > csv columns > reports a filter, display or value column the file does not have 1ms
+ ✓ src/lib/validation/__tests__/semantics.test.ts > csv columns > is silent when every column is present, and when the file is not uploaded (reported elsewhere) 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > accepts a normal lowercase field name 3ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > rejects a blank field name 1ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > rejects a field name starting with a digit 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > rejects uppercase, spaces, and symbols via the charset rule 1ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > rejects a leading underscore 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > rejects a reserved system field name 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > reports only the first problem for a name with multiple, matching SurveyGen 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > fieldname legality > rejects 'end' -- reserved as the End of Form skip target 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > duplicate fieldnames > flags every question sharing a duplicated name 2ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > duplicate fieldnames > matches case-insensitively 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > duplicate fieldnames > exempts information questions from the duplicate check 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > question text > requires text on an ordinary question 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > question text > does not require text on a calculated question 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > question text > treats whitespace-only text as blank 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > mask placement > allows a mask on a text question 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > mask placement > rejects a mask on a non-text question 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > optional placement > allows optional on a text question 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > optional placement > rejects optional on a non-text question 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > optional placement > is silent when optional is simply unset 0ms
+ ✓ src/lib/validation/__tests__/identity.test.ts > formId/tablename are attached > stamps every finding with the form it came from 1ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument escaping > escapes every attribute, including ones the old generator emitted raw 7ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument escaping > escapes apostrophes, which would otherwise terminate the attribute 2ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument escaping > escapes text content 1ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument value retention > keeps '0', 0, false and '' -- omitting only undefined and null 0ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument value retention > keeps a 0 text node, which a truthiness guard would drop 0ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument value retention > textEl returns undefined only for undefined/null 0ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument value retention > blankToUndefined is the explicit opt-in for dropping blanks 0ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument structure > drops false/null/undefined children so callers can use `cond && el()` 1ms
+ ✓ src/lib/xml/__tests__/emit.test.ts > renderDocument structure > emits an explicit open/close pair for a childless, textless element 0ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > brackets the authored questions and ends with the end screen 3ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > is idempotent -- applying it to its own output changes nothing 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > drops a hand-declared reserved field rather than emitting it twice 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > matches reserved names case-insensitively 0ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > never strips a Computed Automatic Variable -- those are authored 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > uses the app-owned wording by default so a French build can translate it 0ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > keeps custom end-screen wording when given 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > gives every system field the fieldtype the app expects 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > withSystemFields > emits uniqueid even for a form with no questions at all 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > the parent link field > is emitted on a child form, after the trailing block and before the end screen 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > the parent link field > is absent on a base form -- it would name a parent that does not exist 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > the parent link field > carries the fieldtype the app expects and no calculation 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > the parent link field > is idempotent on a child form 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > the parent link field > is removed once the form no longer declares a parent 0ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > stripGeneratedQuestions > is the inverse of withSystemFields for authored content 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > stripGeneratedQuestions > removes the parent link, so it is never persisted as an authored question 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > stripGeneratedQuestions > reports custom end-screen text but not the generated default 1ms
+ ✓ src/lib/xml/__tests__/systemFields.test.ts > name classification > separates reserved from computed-automatic 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > expressionRefs > finds a single field reference 5ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > expressionRefs > drops boolean and contains vocabulary, including the split-up words of "does not contain" 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > expressionRefs > never matches a bare number 2ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > expressionRefs > strips quoted literals before matching, so a quoted comparison value is not a reference 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > expressionRefs > deduplicates repeated references 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > expressionRefs > is case-insensitive about keywords but preserves reference casing 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > placeholderRefs > extracts a bracketed reference 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > placeholderRefs > extracts multiple distinct placeholders in order 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > placeholderRefs > returns empty for text with no placeholders, undefined, or empty string 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > unwrapRef > unwraps a bracketed reference 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > unwrapRef > leaves a bare field name untouched 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > unwrapRef > leaves a literal date untouched 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > extracts a bare lookup field 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > unwraps a hand-typed [[field]] reference, since the editor is free text 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > scans separator for placeholders only, matching age_at_date's target-date usage 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > does not treat an age unit word or a date offset as a reference 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > walks nested math/concat parts with a positional path 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > walks case branches, their results, and the else default 1ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > extracts query parameter fields and placeholders in sql 0ms
+ ✓ src/lib/validation/__tests__/refs.test.ts > calculationRefs > returns empty for an undefined calculation 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > manifest header > matches the SurveyGen sample 2ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > manifest header > derives databaseName from surveyId only when not given 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > base CRF > carries display_fields -- which the old generator dropped on base forms 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > base CRF > matches the sample on every key the sample has 1ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > base CRF > omits requireslink, as the sample does 1ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > base CRF > omits child-only repeat settings 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > base CRF > keeps an empty idconfig prefix rather than dropping it 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > base CRF > follows the reference generator key order, for diffability 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > child CRF > matches the sample on every key the sample has 1ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > child CRF > always states the repeat settings explicitly 0ms
+ ✓ src/lib/xml/__tests__/manifest.test.ts > primarykey is never guessed > is omitted when unset rather than defaulting to a column no form has 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > resolves an authored field to its index 3ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > resolves leading system fields as legal to read, without an index 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > resolves trailing system fields distinctly -- these are the ones still empty during the interview 1ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > resolves a declared Computed Automatic Variable as authored, since it has a real position 1ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > resolves an UNdeclared Computed Automatic Variable to the automatic kind, not authored 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > resolves an unknown name 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > is case-insensitive 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > a hand-declared reserved field still resolves as reserved, not authored 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope resolve > a duplicate fieldname resolves to the FIRST occurrence 1ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope.suppliedAutoFields > collects primaryKey and displayFields as comma-split lists 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope.suppliedAutoFields > collects linkingfield and incrementField 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope.suppliedAutoFields > collects idconfig field names 0ms
+ ✓ src/lib/validation/__tests__/scope.test.ts > buildFormScope.suppliedAutoFields > is empty when the form declares no manifest configuration 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > primaryKey / displayFields / incrementField > is silent when every named field exists 2ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > primaryKey / displayFields / incrementField > errors on a primaryKey naming a nonexistent field 1ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > primaryKey / displayFields / incrementField > checks each entry in a comma-separated displayFields list independently 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > primaryKey / displayFields / incrementField > checks each idconfig field name 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > primaryKey / displayFields / incrementField > a manifest field may legally name a system field (e.g. startdate in displayFields) 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > linkingfield > is not required on a base form (no parenttable) 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > linkingfield > is required once a parenttable is set 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > linkingfield > must name a real field on this form 0ms
+ ✓ src/lib/validation/__tests__/formManifest.test.ts > linkingfield > is silent when a valid linkingfield is set 1ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > getErrorCode > reads a PostgrestError's SQLSTATE 3ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > getErrorCode > is undefined for an ordinary Error 1ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > getErrorCode > is undefined for null, a string, and an object with no code 0ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > getErrorCode > ignores a non-string code rather than coercing it 0ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > getErrorDetails > reads the details, which name the constraint 0ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > getErrorDetails > is undefined when details is null 0ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > isUniqueViolation > matches on the SQLSTATE 0ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > isUniqueViolation > matches on the message when the code did not survive 0ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > isUniqueViolation > is case-insensitive about the message 1ms
+ ✓ src/lib/errors/__tests__/postgrestError.test.ts > isUniqueViolation > does not match an unrelated failure 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > static responses > errors on a selection question with no options 2ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > static responses > is silent with valid options 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > static responses > flags a duplicate option value 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > static responses > flags a blank option label 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > static responses > does not apply to non-selection question types 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > dynamic responses > is silent with a complete, uploaded csv config 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > dynamic responses > errors when a csv source has no file 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > dynamic responses > errors when a database source has no table 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > dynamic responses > errors when display or value columns are missing 1ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > dynamic responses > errors when the named CSV was never uploaded to this survey -- no SurveyGen equivalent, since Excel just names a file on disk 0ms
+ ✓ src/lib/validation/__tests__/responses.test.ts > dynamic responses > a static-only question is not treated as dynamic just because responseMode is unset and dynamicResponses is absent 0ms
+ ✓ src/docs/__tests__/docs.test.ts > documentation > has a Markdown file for every page in the nav 2ms
+ ✓ src/docs/__tests__/docs.test.ts > documentation > lists every Markdown file in the nav 0ms
+ ✓ src/docs/__tests__/docs.test.ts > documentation > starts every page with a single level-1 heading 1ms
+ ✓ src/docs/__tests__/docs.test.ts > documentation > only links to pages, anchors and images that exist 3ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > splits a plain comma-separated header row 3ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > reads only the first line -- data rows must not leak into the header 1ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > handles CRLF line endings 1ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > keeps a comma inside a quoted header intact 1ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > unescapes a doubled quote inside a quoted header 1ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > trims surrounding whitespace on unquoted headers 0ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > drops empty trailing columns from a trailing comma 1ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > returns an empty list for an empty or whitespace-only file 1ms
+ ✓ src/lib/__tests__/csvHeaders.test.ts > parseCsvHeaderRow > returns a single header for a file with no commas 1ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > reads an Error's message 2ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > reads a Supabase-style plain object 0ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > passes a thrown string through 0ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > falls back for an Error with an empty message 0ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > falls back for an object whose message is not a string 0ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > falls back for null, undefined and unrelated values 0ms
+ ✓ src/lib/errors/__tests__/getErrorMessage.test.ts > getErrorMessage > keeps a subclass's message 0ms
+ ✓ src/lib/xml/__tests__/normalize.test.ts > normalizeStoredQuestions > strips a stored array that still carries the generated system fields and end screen 3ms
+ ✓ src/lib/xml/__tests__/normalize.test.ts > normalizeStoredQuestions > recovers a customised end-screen text, but not the generated default 1ms
+ ✓ src/lib/xml/__tests__/normalize.test.ts > normalizeStoredQuestions > leaves an already-clean stored array's fieldnames and count untouched 0ms
+ ✓ src/lib/xml/__tests__/normalize.test.ts > normalizeStoredQuestions > still upgrades legacy field shapes on the way through 0ms
+ ✓ src/lib/xml/__tests__/normalize.test.ts > normalizeStoredQuestions > returns an empty result for non-array input 0ms
+ ✓ src/lib/__tests__/csv.test.ts > csvCell > passes a plain value through unquoted 2ms
+ ✓ src/lib/__tests__/csv.test.ts > csvCell > treats null and undefined as an empty cell 0ms
+ ✓ src/lib/__tests__/csv.test.ts > csvCell > quotes a value containing a comma 0ms
+ ✓ src/lib/__tests__/csv.test.ts > csvCell > quotes and doubles an embedded quote 0ms
+ ✓ src/lib/__tests__/csv.test.ts > csvCell > quotes a value containing a bare \r as well as \n 0ms
+ ✓ src/lib/__tests__/csv.test.ts > csvCell > stringifies a non-scalar as JSON rather than "[object Object]" 0ms
+ ✓ src/lib/__tests__/csv.test.ts > buildCsv > starts with a UTF-8 BOM 0ms
+ ✓ src/lib/__tests__/csv.test.ts > buildCsv > escapes header cells the same as data cells 0ms
+ ✓ src/lib/__tests__/csv.test.ts > buildCsv > joins headers and rows with the right delimiters 0ms
+ ✓ src/lib/__tests__/csv.test.ts > buildCsv > produces just the header row for no data 0ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > parseDataStatusFilter > reads each known filter 2ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > parseDataStatusFilter > defaults to deployed, so test data is never shown without asking for it 1ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > countFor > picks one status, or sums both for all 0ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > withDataStatus > test 1ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > withDataStatus > deployed 0ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > withDataStatus > all 0ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > export naming > keeps the existing file name for deployed data and marks the others 0ms
+ ✓ src/lib/__tests__/dataStatus.test.ts > export naming > says in the scope which data an export holds 0ms
+ ✓ src/lib/__tests__/passwordPolicy.test.ts > password policy > matches minimum_password_length in supabase/config.toml 2ms
+ ✓ src/lib/__tests__/passwordPolicy.test.ts > password policy > is at least the floor create_app_credential enforces on field workers 0ms
+ ✓ src/lib/__tests__/passwordPolicy.test.ts > password policy > requires re-authentication before a password change 0ms
+ ✓ src/lib/__tests__/passwordPolicy.test.ts > password policy > names the number in the message the user actually reads 0ms
+ ✓ src/lib/__tests__/passwordPolicy.test.ts > password policy > is not overridden per-environment by a [remotes.*] block 1ms
+ ✓ src/lib/__tests__/projectStatus.test.ts > ProjectStatus maps > every status has a label 3ms
+ ✓ src/lib/__tests__/projectStatus.test.ts > ProjectStatus maps > every status has a description 1ms
+ ✓ src/lib/__tests__/projectStatus.test.ts > ProjectStatus maps > every status has a badge class 1ms
+ ✓ src/lib/__tests__/projectStatus.test.ts > ProjectStatus maps > is exactly active and paused 1ms
+ ✓ src/lib/__tests__/projectStatus.test.ts > ProjectStatus maps > paused's description explains that live sessions are cut off, not just new logins 1ms
+ ✓ src/lib/validation/__tests__/clean.test.ts > a real SurveyGen package > actually loaded real question lists -- guards against a broken fixture path passing for the wrong reason 4ms
+ ✓ src/lib/validation/__tests__/clean.test.ts > a real SurveyGen package > produces no findings beyond the known warnings 1ms
+ ✓ src/lib/validation/__tests__/clean.test.ts > a real SurveyGen package > earns exactly the known cross-form warnings 0ms
+
+ Test Files  35 passed (35)
+      Tests  516 passed (516)
+   Start at  12:58:19
+   Duration  4.36s (transform 2.48s, setup 0ms, import 3.98s, tests 996ms, environment 4ms)
+
+exit=0

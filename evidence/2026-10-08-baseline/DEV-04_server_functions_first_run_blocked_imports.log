@@ -1,0 +1,14 @@
+deno 2.9.6 (stable, release, x86_64-unknown-linux-gnu)
+v8 15.0.245.2-rusty
+typescript 6.0.3
+[0m[32mDownload[0m https://deno.land/std@0.224.0/assert/mod.ts
+[0m[32mDownload[0m https://esm.sh/@supabase/supabase-js@2.115.0
+[0m[1m[31merror[0m: Import 'https://deno.land/std@0.224.0/assert/mod.ts' failed.
+    0: error sending request for url (https://deno.land/std@0.224.0/assert/mod.ts): client error (Connect): unsuccessful tunnel
+    1: client error (Connect)
+    2: unsuccessful tunnel
+    at [0m[36mfile:///home/user/DataKollecta-Web/supabase/functions/tests/app-login.test.ts[0m:[0m[33m1[0m:[0m[33m55[0m
+
+Stack backtrace:
+   0: <unknown>
+exit=1

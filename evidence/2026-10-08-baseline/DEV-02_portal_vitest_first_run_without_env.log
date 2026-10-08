@@ -1,0 +1,32 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vite.config.ts:14:65). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+12:44:49 PM [vite] warning: `optimizeDeps.esbuildOptions` option was specified by "vite:react-swc" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+
+ RUN  v4.1.11 /home/user/DataKollecta-Web
+
+ ❯ src/lib/errors/__tests__/surveyErrors.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/lib/errors/__tests__/surveyErrors.test.ts [ src/lib/errors/__tests__/surveyErrors.test.ts ]
+Error: Missing Supabase environment variables
+ ❯ src/lib/supabase.ts:7:9
+      5|
+      6| if (!supabaseUrl || !supabaseAnonKey) {
+      7|   throw new Error('Missing Supabase environment variables');
+       |         ^
+      8| }
+      9|
+ ❯ src/lib/errors/surveyErrors.ts:1:1
+ ❯ src/lib/errors/__tests__/surveyErrors.test.ts:2:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 34 passed (35)
+      Tests  500 passed (500)
+   Start at  12:44:49
+   Duration  3.89s (transform 2.20s, setup 0ms, import 3.40s, tests 943ms, environment 16ms)
+
+exit=1

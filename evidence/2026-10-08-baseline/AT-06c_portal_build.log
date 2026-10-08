@@ -1,0 +1,24 @@
+
+> datakollecta-web@1.2.0 build
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 16 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 2492 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                       1.05 kB │ gzip:   0.52 kB
+dist/assets/hero-bg-DbeD42ui.jpg    202.75 kB
+dist/assets/index-DOImLpVM.css       63.06 kB │ gzip:  11.36 kB
+dist/assets/Docs-DZyo3Ask.js        296.04 kB │ gzip:  94.37 kB
+dist/assets/index-uDav7SbP.js     1,133.17 kB │ gzip: 326.59 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 7.04s
+exit=0
